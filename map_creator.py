@@ -1,4 +1,3 @@
-# map_creator.py
 import folium
 import webbrowser
 
@@ -6,7 +5,10 @@ import webbrowser
 my_location = [48.6937223, 6.1834097]  # Exemple : coordonnées à Nancy
 
 # Fonction pour générer une carte interactive avec les stations de vélos
-def generate_bike_map(stations_data):
+def generate_bike_map(stations_data, cyclocity_data):
+    # Créer un dictionnaire avec le station_id de Cyclocity comme clé et le name comme valeur
+    cyclocity_stations = {str(station['station_id']): station['name'] for station in cyclocity_data['data']['stations']}
+
     # Coordonnées de Nancy pour centrer la carte
     nancy_coords = [48.6937223, 6.1834097]
 
@@ -20,9 +22,11 @@ def generate_bike_map(stations_data):
         icon=folium.Icon(color="pink")  # Couleur bleue pour l'icône de position
     ).add_to(bike_map)
 
-    # Ajouter un marqueur pour chaque station de vélos
+    # Ajouter un marqueur pour chaque station de vélos de JCDecaux
     for station in stations_data:
-        station_name = station['name']
+        station_number = str(station['number'])  # Convertir 'number' de JCDecaux en chaîne pour correspondance
+        station_name = cyclocity_stations.get(station_number, "Nom inconnu")  # Utiliser le nom de Cyclocity ou "Nom inconnu" si non trouvé
+
         lat = station['position']['lat']
         lon = station['position']['lng']
         bikes_available = station['available_bikes']
@@ -34,30 +38,32 @@ def generate_bike_map(stations_data):
         # Calculer le pourcentage de remplissage
         fill_percentage = (bikes_available / total_capacity * 100) if total_capacity > 0 else 0
 
-        # Info-bulle pour afficher les détails de la station
-        popup_info = (
-            f"{station_name}<br>"
-            f"Vélos disponibles : {bikes_available}<br>"
-            f"Bornes libres : {stands_available}<br>"
-            f"Pourcentage de remplissage : {int(fill_percentage)}%"  # Utiliser int() pour supprimer les décimales
-        )
+        # Info-bulle formatée en tableau HTML pour un meilleur alignement
+        popup_info = f"""
+        <table style="white-space: nowrap; text-align: left;">
+            <tr><th colspan="2" style="text-align:center;">{station_name}</th></tr>
+            <tr><td>Vélos disponibles :</td><td>{bikes_available}</td></tr>
+            <tr><td>Bornes libres :</td><td>{stands_available}</td></tr>
+            <tr><td>Remplissage :</td><td>{int(fill_percentage)}%</td></tr>
+        </table>
+        """
 
         # Définir la couleur de l'icône selon le pourcentage de remplissage
         if fill_percentage == 100:
             icon_color = "red"  # 100% de remplissage
         elif fill_percentage >= 75:
             icon_color = "orange"  # Entre 75% et 99%
-        elif fill_percentage >= 25:  # Mise à jour ici pour le vert
+        elif fill_percentage >= 25:
             icon_color = "green"  # Entre 25% et 75%
         elif fill_percentage > 0:
             icon_color = "blue"  # Entre 1% et 25%
         else:
             icon_color = "darkblue"  # 0% de remplissage
 
-        # Ajouter le marqueur à la carte
+        # Ajouter le marqueur à la carte avec l'info-bulle alignée
         folium.Marker(
             location=[lat, lon],
-            popup=popup_info,
+            popup=folium.Popup(popup_info, max_width=300),
             icon=folium.Icon(color=icon_color)
         ).add_to(bike_map)
 
@@ -76,3 +82,8 @@ def generate_bike_map(stations_data):
 
     # Ouvrir le fichier HTML dans le navigateur par défaut
     webbrowser.open("bike_map_nancy.html")  # Ouvre le fichier dans le navigateur
+
+
+
+
+
