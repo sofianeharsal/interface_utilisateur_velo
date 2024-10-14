@@ -2,6 +2,7 @@ import requests
 import json
 import time
 import folium
+import webbrowser
 
 # Clé API JCDecaux et ville
 API_KEY = "ae7cdd5bbdb5f8b8c6204dfc290f3fff39392251"  # Remplacez par votre clé API JCDecaux
@@ -13,8 +14,10 @@ URL = f"https://api.jcdecaux.com/vls/v1/stations?contract={CITY}&apiKey={API_KEY
 # Cache pour stocker les données et gérer le rafraîchissement
 cached_data = None
 last_fetch_time = 0
-refresh_interval = 300  # Rafraîchir les données toutes les 5 minutes (300 secondes)
+refresh_interval = 120  # Rafraîchir les données toutes les 2 minutes (120 secondes)
 
+# Position actuelle (remplacez par vos coordonnées si nécessaire)
+my_location = [48.6937223, 6.1834097]  # Exemple : coordonnées à Nancy
 
 # Fonction pour récupérer les données dynamiques depuis l'API JCDecaux
 def fetch_dynamic_data():
@@ -25,7 +28,6 @@ def fetch_dynamic_data():
     except requests.exceptions.RequestException as e:
         print(f"Erreur lors de la requête API: {e}")
         return []
-
 
 # Fonction pour gérer le cache et récupérer les données (soit du cache, soit de l'API)
 def get_data():
@@ -43,7 +45,6 @@ def get_data():
 
     return cached_data
 
-
 # Fonction pour générer une carte interactive avec les stations de vélos
 def generate_bike_map(stations_data):
     # Coordonnées de Nancy pour centrer la carte
@@ -51,6 +52,13 @@ def generate_bike_map(stations_data):
 
     # Créer la carte centrée sur Nancy
     bike_map = folium.Map(location=nancy_coords, zoom_start=14)
+
+    # Ajouter un marqueur pour votre position actuelle
+    folium.Marker(
+        location=my_location,
+        popup="Vous êtes ici",
+        icon=folium.Icon(color="blue")  # Couleur bleue pour l'icône de position
+    ).add_to(bike_map)
 
     # Ajouter un marqueur pour chaque station de vélos
     for station in stations_data:
@@ -77,6 +85,8 @@ def generate_bike_map(stations_data):
     bike_map.save("bike_map_nancy.html")
     print("Carte mise à jour sauvegardée dans 'bike_map_nancy.html'")
 
+    # Ouvrir le fichier HTML dans le navigateur par défaut
+    webbrowser.open("bike_map_nancy.html")  # Ouvre le fichier dans le navigateur
 
 # Programme principal
 if __name__ == "__main__":
