@@ -5,7 +5,7 @@ import folium
 import webbrowser
 
 # Clé API JCDecaux et ville
-API_KEY = "ae7cdd5bbdb5f8b8c6204dfc290f3fff39392251"  # Remplacez par votre clé API JCDecaux
+API_KEY = "ae7cdd5bbdb5f8b8c6204dfc290f3fff39392251"
 CITY = "nancy"
 
 # URL de base pour récupérer les données des stations
@@ -19,6 +19,7 @@ refresh_interval = 120  # Rafraîchir les données toutes les 2 minutes (120 sec
 # Position actuelle (remplacez par vos coordonnées si nécessaire)
 my_location = [48.6937223, 6.1834097]  # Exemple : coordonnées à Nancy
 
+
 # Fonction pour récupérer les données dynamiques depuis l'API JCDecaux
 def fetch_dynamic_data():
     try:
@@ -28,6 +29,7 @@ def fetch_dynamic_data():
     except requests.exceptions.RequestException as e:
         print(f"Erreur lors de la requête API: {e}")
         return []
+
 
 # Fonction pour gérer le cache et récupérer les données (soit du cache, soit de l'API)
 def get_data():
@@ -45,6 +47,7 @@ def get_data():
 
     return cached_data
 
+
 # Fonction pour générer une carte interactive avec les stations de vélos
 def generate_bike_map(stations_data):
     # Coordonnées de Nancy pour centrer la carte
@@ -57,7 +60,7 @@ def generate_bike_map(stations_data):
     folium.Marker(
         location=my_location,
         popup="Vous êtes ici",
-        icon=folium.Icon(color="blue")  # Couleur bleue pour l'icône de position
+        icon=folium.Icon(color="pink")  # Couleur bleue pour l'icône de position
     ).add_to(bike_map)
 
     # Ajouter un marqueur pour chaque station de vélos
@@ -68,11 +71,34 @@ def generate_bike_map(stations_data):
         bikes_available = station['available_bikes']
         stands_available = station['available_bike_stands']
 
-        # Info-bulle pour afficher les détails de la station
-        popup_info = f"{station_name}<br>Vélos disponibles : {bikes_available}<br>Bornes libres : {stands_available}"
+        # Calculer la capacité totale de la station
+        total_capacity = bikes_available + stands_available
 
-        # Définir la couleur de l'icône selon la disponibilité des vélos
-        icon_color = "green" if bikes_available > 0 else "red"
+        # Calculer le pourcentage de remplissage
+        if total_capacity > 0:
+            fill_percentage = (bikes_available / total_capacity) * 100
+        else:
+            fill_percentage = 0
+
+        # Info-bulle pour afficher les détails de la station
+        popup_info = (
+            f"{station_name}<br>"
+            f"Vélos disponibles : {bikes_available}<br>"
+            f"Bornes libres : {stands_available}<br>"
+            f"Pourcentage de remplissage : {int(fill_percentage)}%"  # Utiliser int() pour supprimer les décimales
+        )
+
+        # Définir la couleur de l'icône selon le pourcentage de remplissage
+        if fill_percentage == 100:
+            icon_color = "red"  # 100% de remplissage
+        elif fill_percentage >= 75:
+            icon_color = "orange"  # Entre 75% et 99%
+        elif fill_percentage >= 25:  # Mise à jour ici pour le vert
+            icon_color = "green"  # Entre 25% et 75%
+        elif fill_percentage > 0:
+            icon_color = "blue"  # Entre 1% et 25%
+        else:
+            icon_color = "darkblue"  # 0% de remplissage
 
         # Ajouter le marqueur à la carte
         folium.Marker(
@@ -97,6 +123,7 @@ def generate_bike_map(stations_data):
     # Ouvrir le fichier HTML dans le navigateur par défaut
     webbrowser.open("bike_map_nancy.html")  # Ouvre le fichier dans le navigateur
 
+
 # Programme principal
 if __name__ == "__main__":
     # Récupérer les données actualisées des stations
@@ -107,4 +134,6 @@ if __name__ == "__main__":
         generate_bike_map(stations_data)
     else:
         print("Aucune donnée disponible pour générer la carte.")
+
+
 

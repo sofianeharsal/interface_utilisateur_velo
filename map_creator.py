@@ -17,7 +17,7 @@ def generate_bike_map(stations_data):
     folium.Marker(
         location=my_location,
         popup="Vous êtes ici",
-        icon=folium.Icon(color="blue")  # Couleur bleue pour l'icône de position
+        icon=folium.Icon(color="pink")  # Couleur bleue pour l'icône de position
     ).add_to(bike_map)
 
     # Ajouter un marqueur pour chaque station de vélos
