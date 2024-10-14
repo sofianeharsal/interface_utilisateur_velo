@@ -1,5 +1,6 @@
 import requests
 
+
 # Clé API JCDecaux et ville
 API_KEY = "ae7cdd5bbdb5f8b8c6204dfc290f3fff39392251"  # Remplacez par votre clé API JCDecaux
 CITY = "nancy"
