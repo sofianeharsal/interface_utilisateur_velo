@@ -81,6 +81,15 @@ def generate_bike_map(stations_data):
             icon=folium.Icon(color=icon_color)
         ).add_to(bike_map)
 
+    # Ajouter un script JavaScript pour recharger la page toutes les 2 minutes
+    bike_map.get_root().html.add_child(folium.Element("""
+        <script>
+            setTimeout(function() {
+                location.reload();
+            }, 120000); // 120000 milliseconds = 2 minutes
+        </script>
+    """))
+
     # Sauvegarder la carte dans un fichier HTML
     bike_map.save("bike_map_nancy.html")
     print("Carte mise à jour sauvegardée dans 'bike_map_nancy.html'")
@@ -98,3 +107,4 @@ if __name__ == "__main__":
         generate_bike_map(stations_data)
     else:
         print("Aucune donnée disponible pour générer la carte.")
+
