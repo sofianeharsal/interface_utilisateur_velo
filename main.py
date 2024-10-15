@@ -1,4 +1,4 @@
-from data_api import fetch_jcdecaux_data, fetch_cyclocity_data
+from data_api import fetch_jcdecaux_data, fetch_cyclocity_data, CITY
 from map_creator import generate_bike_map
 
 # Programme principal
@@ -9,6 +9,6 @@ if __name__ == "__main__":
 
     # Générer la carte interactive avec ces données
     if stations_data:
-        generate_bike_map(stations_data, cyclocity_data)
+        generate_bike_map(stations_data, cyclocity_data, CITY)
     else:
         print("Aucune donnée disponible pour générer la carte.")
