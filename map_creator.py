@@ -1,9 +1,8 @@
 import folium
 import webbrowser
 import OptChemins
+import GestionStations as GS
 
-# Position actuelle (remplacez par vos coordonnées si nécessaire)
-my_location = [48.6937223, 6.1834097]  # Exemple : coordonnées à Nancy
 
 # Fonction pour générer une carte interactive avec les stations de vélos
 def generate_bike_map(stations_data, cyclocity_data, city_name):
@@ -17,18 +16,20 @@ def generate_bike_map(stations_data, cyclocity_data, city_name):
     bike_map = folium.Map(location=nancy_coords, zoom_start=14)
 
     # Add the optimized route as a polyline to the map
-    route_coords = OptChemins.opt_chemins(stations_data[0]['position'], stations_data[1]['position'])
+    start_station, end_station = GS.gestion_stations(stations_data)
+    route_coords = OptChemins.opt_chemins(start_station['position'], end_station['position'])
     folium.PolyLine(route_coords, color='blue', weight=5, opacity=0.8).add_to(bike_map)
     # nodes = OptChemins.get_all_nodes()
-
-    # for idx, node in nodes.iterrows():
-    #     folium.CircleMarker(
-    #         location=(node['y'], node['x']),  # Node coordinates (latitude, longitude)
-    #         radius=2,                         # Size of the marker
-    #         color='red',                      # Marker color
-    #         fill=True,
-    #         fill_opacity=0.7
-    #     ).add_to(bike_map)
+    '''
+    for idx, node in nodes.iterrows():
+        folium.CircleMarker(
+            location=(node['y'], node['x']),  # Node coordinates (latitude, longitude)
+            radius=2,                         # Size of the marker
+            color='red',                      # Marker color
+            fill=True,
+            fill_opacity=0.7
+        ).add_to(bike_map)
+    '''
 
 
     # Ajouter un marqueur pour chaque station de vélos de JCDecaux
@@ -38,7 +39,6 @@ def generate_bike_map(stations_data, cyclocity_data, city_name):
     for station in stations_data:
         station_number = str(station['number'])
         station_name = cyclocity_stations.get(station_number, "Nom inconnu")
-
         lat = station['position']['lat']
         lon = station['position']['lng']
         bikes_available = station['available_bikes']

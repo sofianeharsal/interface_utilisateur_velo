@@ -2,7 +2,7 @@ import networkx as nx
 import osmnx as ox
 from geopy.distance import geodesic
 
-
+'''
 def complete_map():
     # Get the graph for the city of Nancy, France
     map_nancy = ox.graph_from_place('Nancy, France', network_type='drive')
@@ -56,51 +56,88 @@ def complete_map():
         map_combined.graph['crs'] = 'EPSG:4326'
 
     return map_combined
+'''
+
+
+# def connect_nodes(map_combined):
 
 
 def opt_chemins(station_deb, station_fin):
-    # Fetching the combined nodes maps of Nancy, Vandoeuvre-lès-Nancy, Malzéville and Saint-Max
-    map_combined = complete_map()
+    try:
+        # Fetching the combined nodes maps of Nancy, Vandoeuvre-lès-Nancy, Malzéville and Saint-Max
+        # map_combined = complete_map()
 
-    # Storing the starting and ending points coordinates as lists of floats
-    start_coord = [float(station_deb['lat']), float(station_deb['lng'])]
-    end_coord = [float(station_fin['lat']), float(station_fin['lng'])]
+        # Fetching the nodes maps of Nancy
+        map_nancy = ox.graph_from_place('Nancy, France', network_type='drive')
 
-    # Find the shortest path between two points, minimizing travel time
-    source = ox.nearest_nodes(map_combined, float(station_deb['lng']),
-                              float(station_deb['lat']))  # Coordinates of starting point
-    target = ox.nearest_nodes(map_combined, float(station_fin['lng']),
-                              float(station_fin['lat']))  # Coordinates of ending point
+        # Storing the starting and ending points coordinates as lists of floats
+        start_coord = [float(station_deb['lat']), float(station_deb['lng'])]
+        end_coord = [float(station_fin['lat']), float(station_fin['lng'])]
 
-    # Add start and end coordinates as new nodes
-    map_combined.add_node("start", y=start_coord[0], x=start_coord[1])
-    map_combined.add_node("end", y=end_coord[0], x=end_coord[1])
+        # Find the shortest path between two points, minimizing travel time
+        source = ox.nearest_nodes(map_nancy, float(station_deb['lng']),
+                                  float(station_deb['lat']))  # Coordinates of starting point
+        target = ox.nearest_nodes(map_nancy, float(station_fin['lng']),
+                                  float(station_fin['lat']))  # Coordinates of ending point
 
-    # Connect the new start node to the nearest node in the graph
-    start_edge_weight = calculate_edge_weight(start_coord,
-                                              (map_combined.nodes[source]['y'], map_combined.nodes[source]['x']))
-    map_combined.add_edge("start", source, weight=start_edge_weight)
-    map_combined.add_edge(source, "start", weight=start_edge_weight)  # Make it bidirectional
+        # Add start and end coordinates as new nodes
+        map_nancy.add_node("start", y=start_coord[0], x=start_coord[1])
+        map_nancy.add_node("end", y=end_coord[0], x=end_coord[1])
 
-    # Connect the new end node to the nearest node in the graph
-    end_edge_weight = calculate_edge_weight(end_coord,
-                                            (map_combined.nodes[source]['y'], map_combined.nodes[source]['x']))
-    map_combined.add_edge("end", target, weight=end_edge_weight)
-    map_combined.add_edge(target, "end", weight=end_edge_weight)  # Make it bidirectional
+        # Connect the new start node to the nearest node in the graph
+        start_edge_weight = calculate_edge_weight(start_coord,
+                                                  (map_nancy.nodes[source]['y'], map_nancy.nodes[source]['x']))
+        map_nancy.add_edge("start", source, weight=start_edge_weight)
+        map_nancy.add_edge(source, "start", weight=start_edge_weight)  # Make it bidirectional
 
-    shortest_path = nx.shortest_path(map_combined, source="start", target="end", weight='weight')
+        # Connect the new end node to the nearest node in the graph
+        end_edge_weight = calculate_edge_weight(end_coord, (map_nancy.nodes[source]['y'], map_nancy.nodes[source]['x']))
+        map_nancy.add_edge("end", target, weight=end_edge_weight)
+        map_nancy.add_edge(target, "end", weight=end_edge_weight)  # Make it bidirectional
 
-    # Get the geographical coordinates of the nodes along the shortest route
-    route_coords = [(map_combined.nodes[node]['y'], map_combined.nodes[node]['x']) for node in shortest_path]
+        shortest_path = nx.shortest_path(map_nancy, source="start", target="end", weight='weight')
 
-    return route_coords
+        # Get the geographical coordinates of the nodes along the shortest route
+        route_coords = [(map_nancy.nodes[node]['y'], map_nancy.nodes[node]['x']) for node in shortest_path]
+
+        return route_coords
+    except:
+        print("opt_chemins(): An error occurred.")
+        return None
 
 
 # Function to calculate edge weight based on geographic distance
 def calculate_edge_weight(coord1, coord2):
-    return geodesic(coord1, coord2).meters
+    try:
+        return geodesic(coord1, coord2).meters
+    except:
+        print("calculate_edge_weight(): An error occurred.")
+        return None
 
 
+'''
 def get_all_nodes():
     nodes, edges = ox.graph_to_gdfs(complete_map(), nodes=True)
+    return nodes
+'''
+
+
+def get_all_nodes_nancy():
+    nodes, edges = ox.graph_to_gdfs(ox.graph_from_place('Nancy, France', network_type='drive'), nodes=True)
+    return nodes
+
+
+def get_all_nodes_vandoeuvre():
+    nodes, edges = ox.graph_to_gdfs(ox.graph_from_place('Vandoeuvre-lès-Nancy, France', network_type='drive'),
+                                    nodes=True)
+    return nodes
+
+
+def get_all_nodes_malzeville():
+    nodes, edges = ox.graph_to_gdfs(ox.graph_from_place('Malzéville, France', network_type='drive'), nodes=True)
+    return nodes
+
+
+def get_all_nodes_saintmax():
+    nodes, edges = ox.graph_to_gdfs(ox.graph_from_place('Saint-Max, France', network_type='drive'), nodes=True)
     return nodes
