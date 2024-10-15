@@ -122,3 +122,10 @@ def generate_bike_map(stations_data, cyclocity_data, city_name):
 
 
 
+
+
+
+
+
+
+
