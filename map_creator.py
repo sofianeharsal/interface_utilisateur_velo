@@ -98,11 +98,11 @@ def generate_bike_map(stations_data, cyclocity_data, city_name):
                     background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
                     padding: 10px;">
             <b>Légende des stations</b><br>
-            &nbsp; <i class="fa fa-map-marker" style="color:red"></i>&nbsp; 100% de remplissage<br>
-            &nbsp; <i class="fa fa-map-marker" style="color:orange"></i>&nbsp; 75% - 99% de remplissage<br>
-            &nbsp; <i class="fa fa-map-marker" style="color:green"></i>&nbsp; 25% - 75% de remplissage<br>
-            &nbsp; <i class="fa fa-map-marker" style="color:blue"></i>&nbsp; 1% - 25% de remplissage<br>
-            &nbsp; <i class="fa fa-map-marker" style="color:darkblue"></i>&nbsp; 0% de remplissage
+            &nbsp; <i class="fa fa-map-marker" style="color:red"></i>&nbsp; Station pleine<br>
+            &nbsp; <i class="fa fa-map-marker" style="color:orange"></i>&nbsp; 75% à 99% de remplissage<br>
+            &nbsp; <i class="fa fa-map-marker" style="color:green"></i>&nbsp; 25% à 75% de remplissage<br>
+            &nbsp; <i class="fa fa-map-marker" style="color:blue"></i>&nbsp; 1% à 25% de remplissage<br>
+            &nbsp; <i class="fa fa-map-marker" style="color:darkblue"></i>&nbsp; Station vide
         </div>
         """
     bike_map.get_root().html.add_child(folium.Element(legend_html))
