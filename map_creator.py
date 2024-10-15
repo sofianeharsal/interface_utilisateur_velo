@@ -19,16 +19,16 @@ def generate_bike_map(stations_data, cyclocity_data, city_name):
     # Add the optimized route as a polyline to the map
     route_coords = OptChemins.opt_chemins(stations_data[0]['position'], stations_data[1]['position'])
     folium.PolyLine(route_coords, color='blue', weight=5, opacity=0.8).add_to(bike_map)
-    nodes = OptChemins.get_all_nodes()
+    # nodes = OptChemins.get_all_nodes()
 
-    for idx, node in nodes.iterrows():
-        folium.CircleMarker(
-            location=(node['y'], node['x']),  # Node coordinates (latitude, longitude)
-            radius=2,                         # Size of the marker
-            color='red',                      # Marker color
-            fill=True,
-            fill_opacity=0.7
-        ).add_to(bike_map)
+    # for idx, node in nodes.iterrows():
+    #     folium.CircleMarker(
+    #         location=(node['y'], node['x']),  # Node coordinates (latitude, longitude)
+    #         radius=2,                         # Size of the marker
+    #         color='red',                      # Marker color
+    #         fill=True,
+    #         fill_opacity=0.7
+    #     ).add_to(bike_map)
 
 
     # Ajouter un marqueur pour votre position actuelle
