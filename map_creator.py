@@ -1,5 +1,6 @@
 import folium
 import webbrowser
+import OptChemins
 
 # Position actuelle (remplacez par vos coordonnées si nécessaire)
 my_location = [48.6937223, 6.1834097]  # Exemple : coordonnées à Nancy
@@ -14,6 +15,21 @@ def generate_bike_map(stations_data, cyclocity_data, city_name):
 
     # Créer la carte centrée sur Nancy
     bike_map = folium.Map(location=nancy_coords, zoom_start=14)
+
+    # Add the optimized route as a polyline to the map
+    route_coords = OptChemins.opt_chemins(stations_data[0]['position'], stations_data[1]['position'])
+    folium.PolyLine(route_coords, color='blue', weight=5, opacity=0.8).add_to(bike_map)
+    nodes = OptChemins.get_all_nodes()
+
+    for idx, node in nodes.iterrows():
+        folium.CircleMarker(
+            location=(node['y'], node['x']),  # Node coordinates (latitude, longitude)
+            radius=2,                         # Size of the marker
+            color='red',                      # Marker color
+            fill=True,
+            fill_opacity=0.7
+        ).add_to(bike_map)
+
 
     # Ajouter un marqueur pour votre position actuelle
     folium.Marker(
@@ -75,6 +91,21 @@ def generate_bike_map(stations_data, cyclocity_data, city_name):
         </div>
     """
     bike_map.get_root().html.add_child(folium.Element(title_html))
+
+    legend_html = """
+        <div style="position: fixed;
+                    bottom: 50px; left: 50px; width: 220px; height: auto;
+                    background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+                    padding: 10px;">
+            <b>Légende des stations</b><br>
+            &nbsp; <i class="fa fa-map-marker" style="color:red"></i>&nbsp; 100% de remplissage<br>
+            &nbsp; <i class="fa fa-map-marker" style="color:orange"></i>&nbsp; 75% - 99% de remplissage<br>
+            &nbsp; <i class="fa fa-map-marker" style="color:green"></i>&nbsp; 25% - 75% de remplissage<br>
+            &nbsp; <i class="fa fa-map-marker" style="color:blue"></i>&nbsp; 1% - 25% de remplissage<br>
+            &nbsp; <i class="fa fa-map-marker" style="color:darkblue"></i>&nbsp; 0% de remplissage
+        </div>
+        """
+    bike_map.get_root().html.add_child(folium.Element(legend_html))
 
     # Sauvegarder la carte dans un fichier HTML
     bike_map.save("bike_map_nancy.html")
