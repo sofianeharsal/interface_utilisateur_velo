@@ -15,6 +15,17 @@ def generate_bike_map(stations_data, cyclocity_data, city_name):
     # Créer la carte centrée sur Nancy
     bike_map = folium.Map(location=nancy_coords, zoom_start=14)
 
+    # Ajout du bouton de mise à jour
+    update_button_html = """
+        <div style="position: fixed; top: 50px; right: 50px; z-index:9999;">
+            <button onclick="location.reload()" style="padding: 10px; background-color: #4CAF50; color: white;
+            border: none; border-radius: 5px; font-size: 16px;">
+                Prochain trajet !
+            </button>
+        </div>
+        """
+    bike_map.get_root().html.add_child(folium.Element(update_button_html))
+
     # Add the optimized route as a polyline to the map
     start_station, end_station = GS.gestion_stations(stations_data)
     route_coords = OptChemins.opt_chemins(start_station['position'], end_station['position'])
@@ -100,14 +111,6 @@ def generate_bike_map(stations_data, cyclocity_data, city_name):
         """
     bike_map.get_root().html.add_child(folium.Element(legend_html))
 
-    # Mise à jour dynamique avec AJAX
-    bike_map.get_root().html.add_child(folium.Element("""
-            <script>
-                setTimeout(function() {
-                    location.reload();
-                }, 120000); // 120000 milliseconds = 2 minutes
-            </script>
-        """))
 
     # Sauvegarder la carte dans un fichier HTML
     bike_map.save("bike_map_nancy.html")
