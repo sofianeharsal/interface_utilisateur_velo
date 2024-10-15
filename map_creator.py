@@ -80,7 +80,7 @@ def generate_bike_map(stations_data, cyclocity_data, city_name):
                     padding: 10px;">
             <h4 style="margin-bottom: 5px; font-size: 20px;"><b>Ville : {city_name.capitalize()}</b></h4>
             <p>Nombre de stations : {total_stations}</p>
-            <p>Nombre de vélos disponibles : {total_bikes}</p>
+            <p>Nombre de vélos libres : {total_bikes}</p>
         </div>
     """
     bike_map.get_root().html.add_child(folium.Element(title_html))
