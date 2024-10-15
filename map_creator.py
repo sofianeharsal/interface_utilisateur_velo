@@ -22,6 +22,10 @@ def generate_bike_map(stations_data, cyclocity_data):
         icon=folium.Icon(color="pink")  # Couleur bleue pour l'icône de position
     ).add_to(bike_map)
 
+    # Variables pour compter le nombre total de vélos et de stations
+    total_bikes = 0
+    total_stations = len(stations_data)  # On définit total_stations ici
+
     # Ajouter un marqueur pour chaque station de vélos de JCDecaux
     for station in stations_data:
         station_number = str(station['number'])  # Convertir 'number' de JCDecaux en chaîne pour correspondance
@@ -31,6 +35,9 @@ def generate_bike_map(stations_data, cyclocity_data):
         lon = station['position']['lng']
         bikes_available = station['available_bikes']
         stands_available = station['available_bike_stands']
+
+        # Ajouter au total de vélos disponibles
+        total_bikes += bikes_available
 
         # Calculer la capacité totale de la station
         total_capacity = bikes_available + stands_available
@@ -67,14 +74,33 @@ def generate_bike_map(stations_data, cyclocity_data):
             icon=folium.Icon(color=icon_color)
         ).add_to(bike_map)
 
-    # Ajouter un script JavaScript pour recharger la page toutes les 2 minutes
-    bike_map.get_root().html.add_child(folium.Element("""
-        <script>
-            setTimeout(function() {
-                location.reload();
-            }, 120000); // 120000 milliseconds = 2 minutes
-        </script>
-    """))
+    # Ajouter un script HTML pour la légende des couleurs des stations
+    legend_html = """
+        <div style="position: fixed;
+                    bottom: 50px; left: 50px; width: 220px; height: auto;
+                    background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+                    padding: 10px;">
+            <b>Légende des stations</b><br>
+            &nbsp; <i class="fa fa-map-marker" style="color:red"></i>&nbsp; 100% de remplissage<br>
+            &nbsp; <i class="fa fa-map-marker" style="color:orange"></i>&nbsp; 75% - 99% de remplissage<br>
+            &nbsp; <i class="fa fa-map-marker" style="color:green"></i>&nbsp; 25% - 75% de remplissage<br>
+            &nbsp; <i class="fa fa-map-marker" style="color:blue"></i>&nbsp; 1% - 25% de remplissage<br>
+            &nbsp; <i class="fa fa-map-marker" style="color:darkblue"></i>&nbsp; 0% de remplissage
+        </div>
+        """
+    bike_map.get_root().html.add_child(folium.Element(legend_html))
+
+    # Ajouter un encadré de titre en haut à gauche avec le nom de la ville, le nombre de stations et le nombre de vélos disponibles
+    title_html = f"""
+        <div style="position: fixed; top: 10px; left: 10px; width: 300px; height: auto;
+                    background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+                    padding: 10px;">
+            <h4 style="margin-bottom: 5px; font-size: 20px;"><b>Nancy</b></h4>  <!-- Taille de police augmentée à 20px -->
+            <p>Nombre de stations : {total_stations}</p>
+            <p>Nombre de vélos disponibles : {total_bikes}</p>
+        </div>
+    """
+    bike_map.get_root().html.add_child(folium.Element(title_html))
 
     # Sauvegarder la carte dans un fichier HTML
     bike_map.save("bike_map_nancy.html")
@@ -82,6 +108,7 @@ def generate_bike_map(stations_data, cyclocity_data):
 
     # Ouvrir le fichier HTML dans le navigateur par défaut
     webbrowser.open("bike_map_nancy.html")  # Ouvre le fichier dans le navigateur
+
 
 
 
