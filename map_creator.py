@@ -3,9 +3,9 @@ import webbrowser
 import OptChemins
 import GestionStations as GS
 
-
 # Fonction pour générer une carte interactive avec les stations de vélos
 def generate_bike_map(stations_data, cyclocity_data, city_name):
+
     # Créer un dictionnaire avec le station_id de Cyclocity comme clé et le name comme valeur
     cyclocity_stations = {str(station['station_id']): station['name'] for station in cyclocity_data['data']['stations']}
 
