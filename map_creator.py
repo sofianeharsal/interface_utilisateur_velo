@@ -31,13 +31,6 @@ def generate_bike_map(stations_data, cyclocity_data, city_name):
     #     ).add_to(bike_map)
 
 
-    # Ajouter un marqueur pour votre position actuelle
-    folium.Marker(
-        location=my_location,
-        popup="Vous êtes ici",
-        icon=folium.Icon(color="pink")
-    ).add_to(bike_map)
-
     # Ajouter un marqueur pour chaque station de vélos de JCDecaux
     total_stations = len(stations_data)
     total_bikes = sum(station['available_bikes'] for station in stations_data)
@@ -106,6 +99,15 @@ def generate_bike_map(stations_data, cyclocity_data, city_name):
         </div>
         """
     bike_map.get_root().html.add_child(folium.Element(legend_html))
+
+    # Mise à jour dynamique avec AJAX
+    bike_map.get_root().html.add_child(folium.Element("""
+            <script>
+                setTimeout(function() {
+                    location.reload();
+                }, 120000); // 120000 milliseconds = 2 minutes
+            </script>
+        """))
 
     # Sauvegarder la carte dans un fichier HTML
     bike_map.save("bike_map_nancy.html")

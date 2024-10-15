@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_46f0a35dadc76bf35e71f625aaee0d25 {
+                #map_e41636177b01506912eeb81cc16b98dd {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -44,7 +44,7 @@
                     padding: 10px;">
             <h4 style="margin-bottom: 5px; font-size: 20px;"><b>Ville : Nancy</b></h4>
             <p>Nombre de stations : 36</p>
-            <p>Nombre de vélos disponibles : 225</p>
+            <p>Nombre de vélos disponibles : 243</p>
         </div>
     
     
@@ -61,14 +61,21 @@
         </div>
         
     
-            <div class="folium-map" id="map_46f0a35dadc76bf35e71f625aaee0d25" ></div>
+            <script>
+                setTimeout(function() {
+                    location.reload();
+                }, 120000); // 120000 milliseconds = 2 minutes
+            </script>
+        
+    
+            <div class="folium-map" id="map_e41636177b01506912eeb81cc16b98dd" ></div>
         
 </body>
 <script>
     
     
-            var map_46f0a35dadc76bf35e71f625aaee0d25 = L.map(
-                "map_46f0a35dadc76bf35e71f625aaee0d25",
+            var map_e41636177b01506912eeb81cc16b98dd = L.map(
+                "map_e41636177b01506912eeb81cc16b98dd",
                 {
                     center: [48.6937223, 6.1834097],
                     crs: L.CRS.EPSG3857,
@@ -82,1015 +89,988 @@
 
         
     
-            var tile_layer_2b7ad05ba64521ed128dbaf6b9bd76e2 = L.tileLayer(
+            var tile_layer_eb54db87e88779fd72b93ed59d956698 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_2b7ad05ba64521ed128dbaf6b9bd76e2.addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            tile_layer_eb54db87e88779fd72b93ed59d956698.addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var poly_line_b03f08ac4449f117f219f6a27e2cb15a = L.polyline(
+            var poly_line_7fb6f7e49bc12e62812324a6f1b17b92 = L.polyline(
                 [[48.662356, 6.173442], [48.6622889, 6.1730234], [48.6609013, 6.1752877], [48.6609901, 6.175378], [48.6626462, 6.1727652], [48.6629043, 6.1724431], [48.6630352, 6.1721733], [48.6630371, 6.1721114], [48.6632784, 6.1716484], [48.6643861, 6.1698414], [48.6646813, 6.1693574], [48.6656472, 6.1677818], [48.6659182, 6.1674797], [48.6666972, 6.166194], [48.666721193896, 6.16661978303466]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var marker_48ba8342731c601980df4083f6eff750 = L.marker(
-                [48.6937223, 6.1834097],
-                {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
-        
-    
-            var icon_a89a30736184988f8d1d3ec6a77cb544 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "pink", "prefix": "glyphicon"}
-            );
-            marker_48ba8342731c601980df4083f6eff750.setIcon(icon_a89a30736184988f8d1d3ec6a77cb544);
-        
-    
-        var popup_253671ffd84eaec0f80a26e6f5690b7b = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_3e1e199715b0f6d938b2320831d487cf = $(`<div id="html_3e1e199715b0f6d938b2320831d487cf" style="width: 100.0%; height: 100.0%;">Vous êtes ici</div>`)[0];
-                popup_253671ffd84eaec0f80a26e6f5690b7b.setContent(html_3e1e199715b0f6d938b2320831d487cf);
-            
-        
-
-        marker_48ba8342731c601980df4083f6eff750.bindPopup(popup_253671ffd84eaec0f80a26e6f5690b7b)
-        ;
-
-        
-    
-    
-            var marker_aeb7b0d30067a66a77f0f2af62e0d717 = L.marker(
+            var marker_19e6ba5ac8c5f70ebb8e2ec96420c757 = L.marker(
                 [48.662356, 6.173442],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_c025306d4cd023e7ecf04d0679f7b7c2 = L.AwesomeMarkers.icon(
+            var icon_53e4e462517829782d07dd9d6bb64fa0 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_aeb7b0d30067a66a77f0f2af62e0d717.setIcon(icon_c025306d4cd023e7ecf04d0679f7b7c2);
+            marker_19e6ba5ac8c5f70ebb8e2ec96420c757.setIcon(icon_53e4e462517829782d07dd9d6bb64fa0);
         
     
-        var popup_aacf02395a96f23a299d5d156902e0a1 = L.popup({"maxWidth": 300});
+        var popup_e38e5d323c56442aaa435be6d1ded8b5 = L.popup({"maxWidth": 300});
 
         
             
-                var html_71e394ed264dd2fab4ec57654bc28603 = $(`<div id="html_71e394ed264dd2fab4ec57654bc28603" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">NATIONS</th></tr>             <tr><td>Vélos disponibles :</td><td>3</td></tr>             <tr><td>Bornes libres :</td><td>12</td></tr>             <tr><td>Remplissage :</td><td>20%</td></tr>         </table>         </div>`)[0];
-                popup_aacf02395a96f23a299d5d156902e0a1.setContent(html_71e394ed264dd2fab4ec57654bc28603);
+                var html_0b9bb7e9877907c8bb48ce30dd22187e = $(`<div id="html_0b9bb7e9877907c8bb48ce30dd22187e" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">NATIONS</th></tr>             <tr><td>Vélos disponibles :</td><td>1</td></tr>             <tr><td>Bornes libres :</td><td>14</td></tr>             <tr><td>Remplissage :</td><td>6%</td></tr>         </table>         </div>`)[0];
+                popup_e38e5d323c56442aaa435be6d1ded8b5.setContent(html_0b9bb7e9877907c8bb48ce30dd22187e);
             
         
 
-        marker_aeb7b0d30067a66a77f0f2af62e0d717.bindPopup(popup_aacf02395a96f23a299d5d156902e0a1)
+        marker_19e6ba5ac8c5f70ebb8e2ec96420c757.bindPopup(popup_e38e5d323c56442aaa435be6d1ded8b5)
         ;
 
         
     
     
-            var marker_fc4d54f5d9582bce3536bc5f1d67970e = L.marker(
+            var marker_e2821ae7201f35e7d4074516300b89e7 = L.marker(
                 [48.666721193896, 6.16661978303466],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_167dcbbe3f7469f099530e860d9ce38b = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            var icon_638fca52f5cf2b795fa10acb33eb7bb6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
             );
-            marker_fc4d54f5d9582bce3536bc5f1d67970e.setIcon(icon_167dcbbe3f7469f099530e860d9ce38b);
+            marker_e2821ae7201f35e7d4074516300b89e7.setIcon(icon_638fca52f5cf2b795fa10acb33eb7bb6);
         
     
-        var popup_28363e7b4e2db36af1d363881d12b747 = L.popup({"maxWidth": 300});
+        var popup_e5f4a1965ea1dfc821c06b13013fca50 = L.popup({"maxWidth": 300});
 
         
             
-                var html_2ee63a8edb5882788ecd1a14fe6c19db = $(`<div id="html_2ee63a8edb5882788ecd1a14fe6c19db" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">VELODROME (CB)</th></tr>             <tr><td>Vélos disponibles :</td><td>0</td></tr>             <tr><td>Bornes libres :</td><td>24</td></tr>             <tr><td>Remplissage :</td><td>0%</td></tr>         </table>         </div>`)[0];
-                popup_28363e7b4e2db36af1d363881d12b747.setContent(html_2ee63a8edb5882788ecd1a14fe6c19db);
+                var html_cb8bfc3bf8a2ab2c41ce4e4a75589523 = $(`<div id="html_cb8bfc3bf8a2ab2c41ce4e4a75589523" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">VELODROME (CB)</th></tr>             <tr><td>Vélos disponibles :</td><td>21</td></tr>             <tr><td>Bornes libres :</td><td>3</td></tr>             <tr><td>Remplissage :</td><td>87%</td></tr>         </table>         </div>`)[0];
+                popup_e5f4a1965ea1dfc821c06b13013fca50.setContent(html_cb8bfc3bf8a2ab2c41ce4e4a75589523);
             
         
 
-        marker_fc4d54f5d9582bce3536bc5f1d67970e.bindPopup(popup_28363e7b4e2db36af1d363881d12b747)
+        marker_e2821ae7201f35e7d4074516300b89e7.bindPopup(popup_e5f4a1965ea1dfc821c06b13013fca50)
         ;
 
         
     
     
-            var marker_36741fbab2b2c2becee11e7c10edbac5 = L.marker(
+            var marker_beab4bd23acf6c5b37300c8723d4f332 = L.marker(
                 [48.6924654452072, 6.18340055389445],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_4e73868360312c1cbc58ee78f2d198a8 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            var icon_a798815ef86559b24aa96257a95877d9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_36741fbab2b2c2becee11e7c10edbac5.setIcon(icon_4e73868360312c1cbc58ee78f2d198a8);
+            marker_beab4bd23acf6c5b37300c8723d4f332.setIcon(icon_a798815ef86559b24aa96257a95877d9);
         
     
-        var popup_faffa0773e62376bb83780b02db538cc = L.popup({"maxWidth": 300});
+        var popup_47c16380e9ad3de0b33a61195a058fd4 = L.popup({"maxWidth": 300});
 
         
             
-                var html_adad71dfb9b3f93c55b9beafdfced66c = $(`<div id="html_adad71dfb9b3f93c55b9beafdfced66c" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">DOMINICAINS - FOURIER (CB)</th></tr>             <tr><td>Vélos disponibles :</td><td>13</td></tr>             <tr><td>Bornes libres :</td><td>12</td></tr>             <tr><td>Remplissage :</td><td>52%</td></tr>         </table>         </div>`)[0];
-                popup_faffa0773e62376bb83780b02db538cc.setContent(html_adad71dfb9b3f93c55b9beafdfced66c);
+                var html_eea2be9fcc1a66f3ec701e6a6a7aafbf = $(`<div id="html_eea2be9fcc1a66f3ec701e6a6a7aafbf" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">DOMINICAINS - FOURIER (CB)</th></tr>             <tr><td>Vélos disponibles :</td><td>3</td></tr>             <tr><td>Bornes libres :</td><td>22</td></tr>             <tr><td>Remplissage :</td><td>12%</td></tr>         </table>         </div>`)[0];
+                popup_47c16380e9ad3de0b33a61195a058fd4.setContent(html_eea2be9fcc1a66f3ec701e6a6a7aafbf);
             
         
 
-        marker_36741fbab2b2c2becee11e7c10edbac5.bindPopup(popup_faffa0773e62376bb83780b02db538cc)
+        marker_beab4bd23acf6c5b37300c8723d4f332.bindPopup(popup_47c16380e9ad3de0b33a61195a058fd4)
         ;
 
         
     
     
-            var marker_5efa42bd4020b83cbedb6ca67768d7b8 = L.marker(
+            var marker_42025842cc428fbf611874178e726d3c = L.marker(
                 [48.684954, 6.154908],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_cb58ddf22aa36220227315271558985d = L.AwesomeMarkers.icon(
+            var icon_cbf3f22fc3657b50eab8d845bbf6eb3d = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_5efa42bd4020b83cbedb6ca67768d7b8.setIcon(icon_cb58ddf22aa36220227315271558985d);
+            marker_42025842cc428fbf611874178e726d3c.setIcon(icon_cbf3f22fc3657b50eab8d845bbf6eb3d);
         
     
-        var popup_2ededa82be3b8bc03bb2d7ba527a077d = L.popup({"maxWidth": 300});
+        var popup_a28e26526c0b743cb3b2b2c1536f1977 = L.popup({"maxWidth": 300});
 
         
             
-                var html_9a372e5a4b7fa0ac0ec12ceb6b6e5630 = $(`<div id="html_9a372e5a4b7fa0ac0ec12ceb6b6e5630" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">LAXOU MAIRIE</th></tr>             <tr><td>Vélos disponibles :</td><td>2</td></tr>             <tr><td>Bornes libres :</td><td>13</td></tr>             <tr><td>Remplissage :</td><td>13%</td></tr>         </table>         </div>`)[0];
-                popup_2ededa82be3b8bc03bb2d7ba527a077d.setContent(html_9a372e5a4b7fa0ac0ec12ceb6b6e5630);
+                var html_8fe527e0358801a59a19c3509c638bf1 = $(`<div id="html_8fe527e0358801a59a19c3509c638bf1" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">LAXOU MAIRIE</th></tr>             <tr><td>Vélos disponibles :</td><td>1</td></tr>             <tr><td>Bornes libres :</td><td>14</td></tr>             <tr><td>Remplissage :</td><td>6%</td></tr>         </table>         </div>`)[0];
+                popup_a28e26526c0b743cb3b2b2c1536f1977.setContent(html_8fe527e0358801a59a19c3509c638bf1);
             
         
 
-        marker_5efa42bd4020b83cbedb6ca67768d7b8.bindPopup(popup_2ededa82be3b8bc03bb2d7ba527a077d)
+        marker_42025842cc428fbf611874178e726d3c.bindPopup(popup_a28e26526c0b743cb3b2b2c1536f1977)
         ;
 
         
     
     
-            var marker_013154dc3388a4d9eef8eb03e30b96fb = L.marker(
+            var marker_550e7edc69490ca07a52b72b4ada8426 = L.marker(
                 [48.695420147586, 6.19522861327582],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_48de0bc6ce47ad57221177946578997b = L.AwesomeMarkers.icon(
+            var icon_dfb67b23a9bc9ee068232545e5130746 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_013154dc3388a4d9eef8eb03e30b96fb.setIcon(icon_48de0bc6ce47ad57221177946578997b);
+            marker_550e7edc69490ca07a52b72b4ada8426.setIcon(icon_dfb67b23a9bc9ee068232545e5130746);
         
     
-        var popup_1c037952f95d045adb4be8f4c1f4ad50 = L.popup({"maxWidth": 300});
+        var popup_0b0ed527abc1e74b65a318c7ed31b98e = L.popup({"maxWidth": 300});
 
         
             
-                var html_525c8b9523d32542934a346374b6f65f = $(`<div id="html_525c8b9523d32542934a346374b6f65f" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">LES 2 RIVES</th></tr>             <tr><td>Vélos disponibles :</td><td>5</td></tr>             <tr><td>Bornes libres :</td><td>11</td></tr>             <tr><td>Remplissage :</td><td>31%</td></tr>         </table>         </div>`)[0];
-                popup_1c037952f95d045adb4be8f4c1f4ad50.setContent(html_525c8b9523d32542934a346374b6f65f);
+                var html_618107d7c33ddf53b0bc40c7cec8ddbb = $(`<div id="html_618107d7c33ddf53b0bc40c7cec8ddbb" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">LES 2 RIVES</th></tr>             <tr><td>Vélos disponibles :</td><td>6</td></tr>             <tr><td>Bornes libres :</td><td>10</td></tr>             <tr><td>Remplissage :</td><td>37%</td></tr>         </table>         </div>`)[0];
+                popup_0b0ed527abc1e74b65a318c7ed31b98e.setContent(html_618107d7c33ddf53b0bc40c7cec8ddbb);
             
         
 
-        marker_013154dc3388a4d9eef8eb03e30b96fb.bindPopup(popup_1c037952f95d045adb4be8f4c1f4ad50)
+        marker_550e7edc69490ca07a52b72b4ada8426.bindPopup(popup_0b0ed527abc1e74b65a318c7ed31b98e)
         ;
 
         
     
     
-            var marker_ea9eccad54855bd984e0280801178b29 = L.marker(
+            var marker_e11f814664560cb937965be22f379fbd = L.marker(
                 [48.6869197241039, 6.17234789239391],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_f470c7c23bb617738e370de5098b4e1e = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            var icon_4b28b37add971e6a9efccfefb42a6a83 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_ea9eccad54855bd984e0280801178b29.setIcon(icon_f470c7c23bb617738e370de5098b4e1e);
+            marker_e11f814664560cb937965be22f379fbd.setIcon(icon_4b28b37add971e6a9efccfefb42a6a83);
         
     
-        var popup_fdd8035f536124fcdeea91bd3a9f15ce = L.popup({"maxWidth": 300});
+        var popup_abec4ede53db59f995deafc28c18d8a2 = L.popup({"maxWidth": 300});
 
         
             
-                var html_492a826e0274607fd6c9728d1f85fc2c = $(`<div id="html_492a826e0274607fd6c9728d1f85fc2c" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">COMMANDERIE - CHALNOT</th></tr>             <tr><td>Vélos disponibles :</td><td>0</td></tr>             <tr><td>Bornes libres :</td><td>17</td></tr>             <tr><td>Remplissage :</td><td>0%</td></tr>         </table>         </div>`)[0];
-                popup_fdd8035f536124fcdeea91bd3a9f15ce.setContent(html_492a826e0274607fd6c9728d1f85fc2c);
+                var html_ea3304bc7decaee2af924fe661b09ae7 = $(`<div id="html_ea3304bc7decaee2af924fe661b09ae7" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">COMMANDERIE - CHALNOT</th></tr>             <tr><td>Vélos disponibles :</td><td>1</td></tr>             <tr><td>Bornes libres :</td><td>17</td></tr>             <tr><td>Remplissage :</td><td>5%</td></tr>         </table>         </div>`)[0];
+                popup_abec4ede53db59f995deafc28c18d8a2.setContent(html_ea3304bc7decaee2af924fe661b09ae7);
             
         
 
-        marker_ea9eccad54855bd984e0280801178b29.bindPopup(popup_fdd8035f536124fcdeea91bd3a9f15ce)
+        marker_e11f814664560cb937965be22f379fbd.bindPopup(popup_abec4ede53db59f995deafc28c18d8a2)
         ;
 
         
     
     
-            var marker_d4c9577e208f4579824b9a40881548dc = L.marker(
+            var marker_1a8bcddb259983c859a0e814b0777e6b = L.marker(
                 [48.6954870039528, 6.1906794896667],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_85d55b35d31898457f5e3e81d24e4deb = L.AwesomeMarkers.icon(
+            var icon_7cdfd69f15ce7f853c622683213b1c78 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_d4c9577e208f4579824b9a40881548dc.setIcon(icon_85d55b35d31898457f5e3e81d24e4deb);
+            marker_1a8bcddb259983c859a0e814b0777e6b.setIcon(icon_7cdfd69f15ce7f853c622683213b1c78);
         
     
-        var popup_10d25bdf0a01dea74d9d8a5f5b2351a6 = L.popup({"maxWidth": 300});
+        var popup_cab55967c75f9e83e1c83d38b1fc008a = L.popup({"maxWidth": 300});
 
         
             
-                var html_95544e60b9ea99a8b14728ba9ea86713 = $(`<div id="html_95544e60b9ea99a8b14728ba9ea86713" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PORT STE CATHERINE</th></tr>             <tr><td>Vélos disponibles :</td><td>11</td></tr>             <tr><td>Bornes libres :</td><td>5</td></tr>             <tr><td>Remplissage :</td><td>68%</td></tr>         </table>         </div>`)[0];
-                popup_10d25bdf0a01dea74d9d8a5f5b2351a6.setContent(html_95544e60b9ea99a8b14728ba9ea86713);
+                var html_76265b52796723b5bd5d2934b4acb49b = $(`<div id="html_76265b52796723b5bd5d2934b4acb49b" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PORT STE CATHERINE</th></tr>             <tr><td>Vélos disponibles :</td><td>10</td></tr>             <tr><td>Bornes libres :</td><td>6</td></tr>             <tr><td>Remplissage :</td><td>62%</td></tr>         </table>         </div>`)[0];
+                popup_cab55967c75f9e83e1c83d38b1fc008a.setContent(html_76265b52796723b5bd5d2934b4acb49b);
             
         
 
-        marker_d4c9577e208f4579824b9a40881548dc.bindPopup(popup_10d25bdf0a01dea74d9d8a5f5b2351a6)
+        marker_1a8bcddb259983c859a0e814b0777e6b.bindPopup(popup_cab55967c75f9e83e1c83d38b1fc008a)
         ;
 
         
     
     
-            var marker_a1b4e4e59b76a872f4e08e8a1f8cae46 = L.marker(
+            var marker_edf83d260fd14b533ca6ec5eaab9ad8b = L.marker(
                 [48.67227619793021, 6.165710709115886],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_dab95f6e388b4a780ae03674ac333470 = L.AwesomeMarkers.icon(
+            var icon_657b1195b84932a43123f975935e5840 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
             );
-            marker_a1b4e4e59b76a872f4e08e8a1f8cae46.setIcon(icon_dab95f6e388b4a780ae03674ac333470);
+            marker_edf83d260fd14b533ca6ec5eaab9ad8b.setIcon(icon_657b1195b84932a43123f975935e5840);
         
     
-        var popup_b695de08b57b1fbf5b317bf6c2b6f557 = L.popup({"maxWidth": 300});
+        var popup_7859b24afdc189a434cf304f852c814c = L.popup({"maxWidth": 300});
 
         
             
-                var html_e8dcf36fd4d782ce1130bbddd0830797 = $(`<div id="html_e8dcf36fd4d782ce1130bbddd0830797" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">MARCHÉ D'HAUSSONVILLE</th></tr>             <tr><td>Vélos disponibles :</td><td>12</td></tr>             <tr><td>Bornes libres :</td><td>3</td></tr>             <tr><td>Remplissage :</td><td>80%</td></tr>         </table>         </div>`)[0];
-                popup_b695de08b57b1fbf5b317bf6c2b6f557.setContent(html_e8dcf36fd4d782ce1130bbddd0830797);
+                var html_e2d57c12c3de4780456dce950da2472f = $(`<div id="html_e2d57c12c3de4780456dce950da2472f" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">MARCHÉ D'HAUSSONVILLE</th></tr>             <tr><td>Vélos disponibles :</td><td>12</td></tr>             <tr><td>Bornes libres :</td><td>3</td></tr>             <tr><td>Remplissage :</td><td>80%</td></tr>         </table>         </div>`)[0];
+                popup_7859b24afdc189a434cf304f852c814c.setContent(html_e2d57c12c3de4780456dce950da2472f);
             
         
 
-        marker_a1b4e4e59b76a872f4e08e8a1f8cae46.bindPopup(popup_b695de08b57b1fbf5b317bf6c2b6f557)
+        marker_edf83d260fd14b533ca6ec5eaab9ad8b.bindPopup(popup_7859b24afdc189a434cf304f852c814c)
         ;
 
         
     
     
-            var marker_f84f3ff0acf19f709a3e19d279001131 = L.marker(
+            var marker_bcba60e9664c8d14a05400b46d853bdf = L.marker(
                 [48.688015, 6.187451],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_7aaa4f5a1a1cae225952630a7cf52d5c = L.AwesomeMarkers.icon(
+            var icon_701add89888d47338caf46928fe653a6 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_f84f3ff0acf19f709a3e19d279001131.setIcon(icon_7aaa4f5a1a1cae225952630a7cf52d5c);
+            marker_bcba60e9664c8d14a05400b46d853bdf.setIcon(icon_701add89888d47338caf46928fe653a6);
         
     
-        var popup_ad23726f889df0874986be66533d4290 = L.popup({"maxWidth": 300});
+        var popup_f7f37cb79722c5f59cb0c46a6b8e457a = L.popup({"maxWidth": 300});
 
         
             
-                var html_85dd80ba16c5fc3390dba5bbb7a58c0d = $(`<div id="html_85dd80ba16c5fc3390dba5bbb7a58c0d" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">SAINT NICOLAS - CHARLES III</th></tr>             <tr><td>Vélos disponibles :</td><td>4</td></tr>             <tr><td>Bornes libres :</td><td>12</td></tr>             <tr><td>Remplissage :</td><td>25%</td></tr>         </table>         </div>`)[0];
-                popup_ad23726f889df0874986be66533d4290.setContent(html_85dd80ba16c5fc3390dba5bbb7a58c0d);
+                var html_3a2677d143af1a4249a05a6c17e3af4c = $(`<div id="html_3a2677d143af1a4249a05a6c17e3af4c" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">SAINT NICOLAS - CHARLES III</th></tr>             <tr><td>Vélos disponibles :</td><td>5</td></tr>             <tr><td>Bornes libres :</td><td>11</td></tr>             <tr><td>Remplissage :</td><td>31%</td></tr>         </table>         </div>`)[0];
+                popup_f7f37cb79722c5f59cb0c46a6b8e457a.setContent(html_3a2677d143af1a4249a05a6c17e3af4c);
             
         
 
-        marker_f84f3ff0acf19f709a3e19d279001131.bindPopup(popup_ad23726f889df0874986be66533d4290)
+        marker_bcba60e9664c8d14a05400b46d853bdf.bindPopup(popup_f7f37cb79722c5f59cb0c46a6b8e457a)
         ;
 
         
     
     
-            var marker_84f6ef9af9bc26588027f19a61b706c4 = L.marker(
+            var marker_36904c65a70c4dfc82e93e69746b7bf7 = L.marker(
                 [48.6891733257851, 6.18390463043762],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_b49119873726b65c5f9214fe533a9805 = L.AwesomeMarkers.icon(
+            var icon_74176f8bda9eeb4892c58aee74f520ce = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_84f6ef9af9bc26588027f19a61b706c4.setIcon(icon_b49119873726b65c5f9214fe533a9805);
+            marker_36904c65a70c4dfc82e93e69746b7bf7.setIcon(icon_74176f8bda9eeb4892c58aee74f520ce);
         
     
-        var popup_987ac87df5b30dfb225fb9fa5bf57a30 = L.popup({"maxWidth": 300});
+        var popup_b19d8350640b7efa7453baf09b4e0e80 = L.popup({"maxWidth": 300});
 
         
             
-                var html_02f574c4e9c4aab9e49d25cbf73c5652 = $(`<div id="html_02f574c4e9c4aab9e49d25cbf73c5652" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">MARCHE CENTRAL (CB)</th></tr>             <tr><td>Vélos disponibles :</td><td>4</td></tr>             <tr><td>Bornes libres :</td><td>14</td></tr>             <tr><td>Remplissage :</td><td>22%</td></tr>         </table>         </div>`)[0];
-                popup_987ac87df5b30dfb225fb9fa5bf57a30.setContent(html_02f574c4e9c4aab9e49d25cbf73c5652);
+                var html_70d8d50d4e4eb86aa321daa6b1900257 = $(`<div id="html_70d8d50d4e4eb86aa321daa6b1900257" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">MARCHE CENTRAL (CB)</th></tr>             <tr><td>Vélos disponibles :</td><td>3</td></tr>             <tr><td>Bornes libres :</td><td>15</td></tr>             <tr><td>Remplissage :</td><td>16%</td></tr>         </table>         </div>`)[0];
+                popup_b19d8350640b7efa7453baf09b4e0e80.setContent(html_70d8d50d4e4eb86aa321daa6b1900257);
             
         
 
-        marker_84f6ef9af9bc26588027f19a61b706c4.bindPopup(popup_987ac87df5b30dfb225fb9fa5bf57a30)
+        marker_36904c65a70c4dfc82e93e69746b7bf7.bindPopup(popup_b19d8350640b7efa7453baf09b4e0e80)
         ;
 
         
     
     
-            var marker_039a6c734c73c529b8446800ef00c577 = L.marker(
+            var marker_4f7576c5141caca288cb59ef19f4fe0d = L.marker(
                 [48.689560111075, 6.17251545229862],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_14f3b872e4f1b75876d012816db6036c = L.AwesomeMarkers.icon(
+            var icon_66b88f2d1de27b9df64ee0ca7db2b525 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_039a6c734c73c529b8446800ef00c577.setIcon(icon_14f3b872e4f1b75876d012816db6036c);
+            marker_4f7576c5141caca288cb59ef19f4fe0d.setIcon(icon_66b88f2d1de27b9df64ee0ca7db2b525);
         
     
-        var popup_1c5eee02f0d5b76d9235c50968e22500 = L.popup({"maxWidth": 300});
+        var popup_847eafae03556b45dbec1d52960a74eb = L.popup({"maxWidth": 300});
 
         
             
-                var html_a7dfec501c965fb06aed20e9ac8cdffa = $(`<div id="html_a7dfec501c965fb06aed20e9ac8cdffa" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">GARE SAINT LEON</th></tr>             <tr><td>Vélos disponibles :</td><td>4</td></tr>             <tr><td>Bornes libres :</td><td>16</td></tr>             <tr><td>Remplissage :</td><td>20%</td></tr>         </table>         </div>`)[0];
-                popup_1c5eee02f0d5b76d9235c50968e22500.setContent(html_a7dfec501c965fb06aed20e9ac8cdffa);
+                var html_0eaa7f965c8679c6577fa080db3cf49d = $(`<div id="html_0eaa7f965c8679c6577fa080db3cf49d" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">GARE SAINT LEON</th></tr>             <tr><td>Vélos disponibles :</td><td>2</td></tr>             <tr><td>Bornes libres :</td><td>18</td></tr>             <tr><td>Remplissage :</td><td>10%</td></tr>         </table>         </div>`)[0];
+                popup_847eafae03556b45dbec1d52960a74eb.setContent(html_0eaa7f965c8679c6577fa080db3cf49d);
             
         
 
-        marker_039a6c734c73c529b8446800ef00c577.bindPopup(popup_1c5eee02f0d5b76d9235c50968e22500)
+        marker_4f7576c5141caca288cb59ef19f4fe0d.bindPopup(popup_847eafae03556b45dbec1d52960a74eb)
         ;
 
         
     
     
-            var marker_1110431ad654ed04f8fd904d59ffe5e5 = L.marker(
+            var marker_00946f8d2b421c53c1bfaecf39ececec = L.marker(
                 [48.684141, 6.176525],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_5ac119976984a676830cde2c469dc296 = L.AwesomeMarkers.icon(
+            var icon_d5225745f1fe371f118ea9da1e80b060 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_1110431ad654ed04f8fd904d59ffe5e5.setIcon(icon_5ac119976984a676830cde2c469dc296);
+            marker_00946f8d2b421c53c1bfaecf39ececec.setIcon(icon_d5225745f1fe371f118ea9da1e80b060);
         
     
-        var popup_a6fe1cbd9af4cf9a6872fabb0435251e = L.popup({"maxWidth": 300});
+        var popup_211448e7c446200a413ded2ba55fa9e6 = L.popup({"maxWidth": 300});
 
         
             
-                var html_f6c5a06847e25296d440712de171b297 = $(`<div id="html_f6c5a06847e25296d440712de171b297" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">MON DESERT</th></tr>             <tr><td>Vélos disponibles :</td><td>2</td></tr>             <tr><td>Bornes libres :</td><td>13</td></tr>             <tr><td>Remplissage :</td><td>13%</td></tr>         </table>         </div>`)[0];
-                popup_a6fe1cbd9af4cf9a6872fabb0435251e.setContent(html_f6c5a06847e25296d440712de171b297);
+                var html_7b91e388c9f88529f8e790473e69b53a = $(`<div id="html_7b91e388c9f88529f8e790473e69b53a" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">MON DESERT</th></tr>             <tr><td>Vélos disponibles :</td><td>1</td></tr>             <tr><td>Bornes libres :</td><td>14</td></tr>             <tr><td>Remplissage :</td><td>6%</td></tr>         </table>         </div>`)[0];
+                popup_211448e7c446200a413ded2ba55fa9e6.setContent(html_7b91e388c9f88529f8e790473e69b53a);
             
         
 
-        marker_1110431ad654ed04f8fd904d59ffe5e5.bindPopup(popup_a6fe1cbd9af4cf9a6872fabb0435251e)
+        marker_00946f8d2b421c53c1bfaecf39ececec.bindPopup(popup_211448e7c446200a413ded2ba55fa9e6)
         ;
 
         
     
     
-            var marker_ad9c8ca17ca1c7d8b3bf506654b22cc7 = L.marker(
+            var marker_b932de7fa5f6c9078375381d661a431d = L.marker(
                 [48.6886141256403, 6.17950010441818],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_fee1b77a0a2512d87180d9f58ff969a9 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            var icon_5dff4cedd7b9b584540a638888863497 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_ad9c8ca17ca1c7d8b3bf506654b22cc7.setIcon(icon_fee1b77a0a2512d87180d9f58ff969a9);
+            marker_b932de7fa5f6c9078375381d661a431d.setIcon(icon_5dff4cedd7b9b584540a638888863497);
         
     
-        var popup_d665c8eb3174147f23a24301d2307648 = L.popup({"maxWidth": 300});
+        var popup_62a9d03c086405946c41c0c095ba373d = L.popup({"maxWidth": 300});
 
         
             
-                var html_b57709febfcd6b48b28dae0927ab51ec = $(`<div id="html_b57709febfcd6b48b28dae0927ab51ec" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">ST SEBASTIEN - ST THIEBAUT</th></tr>             <tr><td>Vélos disponibles :</td><td>3</td></tr>             <tr><td>Bornes libres :</td><td>19</td></tr>             <tr><td>Remplissage :</td><td>13%</td></tr>         </table>         </div>`)[0];
-                popup_d665c8eb3174147f23a24301d2307648.setContent(html_b57709febfcd6b48b28dae0927ab51ec);
+                var html_363b8d1b9644536fc6ae8217db392517 = $(`<div id="html_363b8d1b9644536fc6ae8217db392517" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">ST SEBASTIEN - ST THIEBAUT</th></tr>             <tr><td>Vélos disponibles :</td><td>7</td></tr>             <tr><td>Bornes libres :</td><td>15</td></tr>             <tr><td>Remplissage :</td><td>31%</td></tr>         </table>         </div>`)[0];
+                popup_62a9d03c086405946c41c0c095ba373d.setContent(html_363b8d1b9644536fc6ae8217db392517);
             
         
 
-        marker_ad9c8ca17ca1c7d8b3bf506654b22cc7.bindPopup(popup_d665c8eb3174147f23a24301d2307648)
+        marker_b932de7fa5f6c9078375381d661a431d.bindPopup(popup_62a9d03c086405946c41c0c095ba373d)
         ;
 
         
     
     
-            var marker_067cff62d545dd3042452a3452c6a678 = L.marker(
+            var marker_92add6f29bd693ff52afdcef06245da9 = L.marker(
                 [48.6858574026886, 6.19290171469907],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_05fa172a3cdf551a6ee816642ff0b5d3 = L.AwesomeMarkers.icon(
+            var icon_a3a0588c0d2d0b883ff8308699496e8b = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_067cff62d545dd3042452a3452c6a678.setIcon(icon_05fa172a3cdf551a6ee816642ff0b5d3);
+            marker_92add6f29bd693ff52afdcef06245da9.setIcon(icon_a3a0588c0d2d0b883ff8308699496e8b);
         
     
-        var popup_6fb8c49e30a3c83cf289b3da42ba0e1e = L.popup({"maxWidth": 300});
+        var popup_39ca3bfede07fb9ed62b5cd588ce3c00 = L.popup({"maxWidth": 300});
 
         
             
-                var html_c5bbc0a3d5ed1c81bde68302276c3944 = $(`<div id="html_c5bbc0a3d5ed1c81bde68302276c3944" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">HOPITAL ST JULIEN</th></tr>             <tr><td>Vélos disponibles :</td><td>9</td></tr>             <tr><td>Bornes libres :</td><td>7</td></tr>             <tr><td>Remplissage :</td><td>56%</td></tr>         </table>         </div>`)[0];
-                popup_6fb8c49e30a3c83cf289b3da42ba0e1e.setContent(html_c5bbc0a3d5ed1c81bde68302276c3944);
+                var html_2fb744582ac8dd0006d135b5061f2647 = $(`<div id="html_2fb744582ac8dd0006d135b5061f2647" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">HOPITAL ST JULIEN</th></tr>             <tr><td>Vélos disponibles :</td><td>10</td></tr>             <tr><td>Bornes libres :</td><td>6</td></tr>             <tr><td>Remplissage :</td><td>62%</td></tr>         </table>         </div>`)[0];
+                popup_39ca3bfede07fb9ed62b5cd588ce3c00.setContent(html_2fb744582ac8dd0006d135b5061f2647);
             
         
 
-        marker_067cff62d545dd3042452a3452c6a678.bindPopup(popup_6fb8c49e30a3c83cf289b3da42ba0e1e)
+        marker_92add6f29bd693ff52afdcef06245da9.bindPopup(popup_39ca3bfede07fb9ed62b5cd588ce3c00)
         ;
 
         
     
     
-            var marker_a56255222ad34e9b9127707779ccc384 = L.marker(
+            var marker_402547e3000cfa499a6c1930a732466b = L.marker(
                 [48.6833502130976, 6.19029660801914],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_d1f925b9c185b8175a16c4424a01fcd1 = L.AwesomeMarkers.icon(
+            var icon_21d1915fabbebe28b4b1c996aab3018e = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_a56255222ad34e9b9127707779ccc384.setIcon(icon_d1f925b9c185b8175a16c4424a01fcd1);
+            marker_402547e3000cfa499a6c1930a732466b.setIcon(icon_21d1915fabbebe28b4b1c996aab3018e);
         
     
-        var popup_db742696de677076a02ccbb30b8039da = L.popup({"maxWidth": 300});
+        var popup_70d9153033a22643ef53f06c17e73d48 = L.popup({"maxWidth": 300});
 
         
             
-                var html_16e47e81a092189dac0bf55f8092fa6d = $(`<div id="html_16e47e81a092189dac0bf55f8092fa6d" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">HOPITAL CENTRAL</th></tr>             <tr><td>Vélos disponibles :</td><td>8</td></tr>             <tr><td>Bornes libres :</td><td>12</td></tr>             <tr><td>Remplissage :</td><td>40%</td></tr>         </table>         </div>`)[0];
-                popup_db742696de677076a02ccbb30b8039da.setContent(html_16e47e81a092189dac0bf55f8092fa6d);
+                var html_9fbdff978b21a3dd4d24214efd6f7943 = $(`<div id="html_9fbdff978b21a3dd4d24214efd6f7943" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">HOPITAL CENTRAL</th></tr>             <tr><td>Vélos disponibles :</td><td>8</td></tr>             <tr><td>Bornes libres :</td><td>12</td></tr>             <tr><td>Remplissage :</td><td>40%</td></tr>         </table>         </div>`)[0];
+                popup_70d9153033a22643ef53f06c17e73d48.setContent(html_9fbdff978b21a3dd4d24214efd6f7943);
             
         
 
-        marker_a56255222ad34e9b9127707779ccc384.bindPopup(popup_db742696de677076a02ccbb30b8039da)
+        marker_402547e3000cfa499a6c1930a732466b.bindPopup(popup_70d9153033a22643ef53f06c17e73d48)
         ;
 
         
     
     
-            var marker_eb8eb442d0e50f7293462ab7e63e73c5 = L.marker(
+            var marker_19433f7f5030b8aeb2af2ab0f0c58c2f = L.marker(
                 [48.6921301, 6.1872695],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_0ea17e472df18a771cb43ce17edb2964 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            var icon_e2570a6dc465061deeb3710261725913 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_eb8eb442d0e50f7293462ab7e63e73c5.setIcon(icon_0ea17e472df18a771cb43ce17edb2964);
+            marker_19433f7f5030b8aeb2af2ab0f0c58c2f.setIcon(icon_e2570a6dc465061deeb3710261725913);
         
     
-        var popup_add49bf30bf6a6cb54ef73d7287561aa = L.popup({"maxWidth": 300});
+        var popup_1ffe7e9b717cac2a0ee98fffcb8f36e0 = L.popup({"maxWidth": 300});
 
         
             
-                var html_c65ced76adc21dda8981d3ebb73d2834 = $(`<div id="html_c65ced76adc21dda8981d3ebb73d2834" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PLACE COLONEL DRIANT</th></tr>             <tr><td>Vélos disponibles :</td><td>13</td></tr>             <tr><td>Bornes libres :</td><td>3</td></tr>             <tr><td>Remplissage :</td><td>81%</td></tr>         </table>         </div>`)[0];
-                popup_add49bf30bf6a6cb54ef73d7287561aa.setContent(html_c65ced76adc21dda8981d3ebb73d2834);
+                var html_21eda0a5d2b097710a603559de5600cf = $(`<div id="html_21eda0a5d2b097710a603559de5600cf" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PLACE COLONEL DRIANT</th></tr>             <tr><td>Vélos disponibles :</td><td>4</td></tr>             <tr><td>Bornes libres :</td><td>12</td></tr>             <tr><td>Remplissage :</td><td>25%</td></tr>         </table>         </div>`)[0];
+                popup_1ffe7e9b717cac2a0ee98fffcb8f36e0.setContent(html_21eda0a5d2b097710a603559de5600cf);
             
         
 
-        marker_eb8eb442d0e50f7293462ab7e63e73c5.bindPopup(popup_add49bf30bf6a6cb54ef73d7287561aa)
+        marker_19433f7f5030b8aeb2af2ab0f0c58c2f.bindPopup(popup_1ffe7e9b717cac2a0ee98fffcb8f36e0)
         ;
 
         
     
     
-            var marker_d29aee8620c654d9cb9c112c27447b25 = L.marker(
+            var marker_ed0596779eb7e5f8c5d495bc0d4fb517 = L.marker(
                 [48.6928180794454, 6.16860978784457],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_574bf449d1c04ec1239841cf4c22baad = L.AwesomeMarkers.icon(
+            var icon_35db6b7335b9d61ed242a4a911745384 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_d29aee8620c654d9cb9c112c27447b25.setIcon(icon_574bf449d1c04ec1239841cf4c22baad);
+            marker_ed0596779eb7e5f8c5d495bc0d4fb517.setIcon(icon_35db6b7335b9d61ed242a4a911745384);
         
     
-        var popup_aa95f178090b5fe50df22593d07b15dd = L.popup({"maxWidth": 300});
+        var popup_1cef389645ec2665c94040f6320bbd6f = L.popup({"maxWidth": 300});
 
         
             
-                var html_96d7ac8eff482dd2731d250300543f9a = $(`<div id="html_96d7ac8eff482dd2731d250300543f9a" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">FAC DE LETTRES</th></tr>             <tr><td>Vélos disponibles :</td><td>11</td></tr>             <tr><td>Bornes libres :</td><td>8</td></tr>             <tr><td>Remplissage :</td><td>57%</td></tr>         </table>         </div>`)[0];
-                popup_aa95f178090b5fe50df22593d07b15dd.setContent(html_96d7ac8eff482dd2731d250300543f9a);
+                var html_80adeda1d5ad2ea5808f2c22f1b225ba = $(`<div id="html_80adeda1d5ad2ea5808f2c22f1b225ba" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">FAC DE LETTRES</th></tr>             <tr><td>Vélos disponibles :</td><td>8</td></tr>             <tr><td>Bornes libres :</td><td>11</td></tr>             <tr><td>Remplissage :</td><td>42%</td></tr>         </table>         </div>`)[0];
+                popup_1cef389645ec2665c94040f6320bbd6f.setContent(html_80adeda1d5ad2ea5808f2c22f1b225ba);
             
         
 
-        marker_d29aee8620c654d9cb9c112c27447b25.bindPopup(popup_aa95f178090b5fe50df22593d07b15dd)
+        marker_ed0596779eb7e5f8c5d495bc0d4fb517.bindPopup(popup_1cef389645ec2665c94040f6320bbd6f)
         ;
 
         
     
     
-            var marker_db5d35804828314eec5990ee53670a92 = L.marker(
+            var marker_4689508b91e68c45c72caa4879965ec9 = L.marker(
                 [48.6984724451821, 6.17798553705909],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_4638fc341e58c9bbf4339feeb90fb4e0 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            var icon_d333f7939f4ef53687347c6f68adf5ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_db5d35804828314eec5990ee53670a92.setIcon(icon_4638fc341e58c9bbf4339feeb90fb4e0);
+            marker_4689508b91e68c45c72caa4879965ec9.setIcon(icon_d333f7939f4ef53687347c6f68adf5ca);
         
     
-        var popup_78636dbd91e59710ddfa7d98dfe5b540 = L.popup({"maxWidth": 300});
+        var popup_5070f2082152f99d0d5a33187058f9c9 = L.popup({"maxWidth": 300});
 
         
             
-                var html_65c370e8e69e624ff8edc3cce31534f8 = $(`<div id="html_65c370e8e69e624ff8edc3cce31534f8" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PORTE DE LA CRAFFE</th></tr>             <tr><td>Vélos disponibles :</td><td>0</td></tr>             <tr><td>Bornes libres :</td><td>20</td></tr>             <tr><td>Remplissage :</td><td>0%</td></tr>         </table>         </div>`)[0];
-                popup_78636dbd91e59710ddfa7d98dfe5b540.setContent(html_65c370e8e69e624ff8edc3cce31534f8);
+                var html_6dcf6514fc712914423232d4dc123e73 = $(`<div id="html_6dcf6514fc712914423232d4dc123e73" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PORTE DE LA CRAFFE</th></tr>             <tr><td>Vélos disponibles :</td><td>5</td></tr>             <tr><td>Bornes libres :</td><td>15</td></tr>             <tr><td>Remplissage :</td><td>25%</td></tr>         </table>         </div>`)[0];
+                popup_5070f2082152f99d0d5a33187058f9c9.setContent(html_6dcf6514fc712914423232d4dc123e73);
             
         
 
-        marker_db5d35804828314eec5990ee53670a92.bindPopup(popup_78636dbd91e59710ddfa7d98dfe5b540)
+        marker_4689508b91e68c45c72caa4879965ec9.bindPopup(popup_5070f2082152f99d0d5a33187058f9c9)
         ;
 
         
     
     
-            var marker_d1a6ec4c9faccfa27c33cfd445429180 = L.marker(
+            var marker_dfc95513043ee6430e1fa50d7ac8a0d9 = L.marker(
                 [48.6995023285111, 6.20473563987354],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_b4772b6a7ff6681d7f265258f784aefd = L.AwesomeMarkers.icon(
+            var icon_13d475052e9f666eb2016ddfc6d17bbc = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_d1a6ec4c9faccfa27c33cfd445429180.setIcon(icon_b4772b6a7ff6681d7f265258f784aefd);
+            marker_dfc95513043ee6430e1fa50d7ac8a0d9.setIcon(icon_13d475052e9f666eb2016ddfc6d17bbc);
         
     
-        var popup_fe9209249db39d178f8b03c1753dc5c8 = L.popup({"maxWidth": 300});
+        var popup_cb19e288ca3dec8b527b7638435dd95d = L.popup({"maxWidth": 300});
 
         
             
-                var html_d38c68a15ebbc038e775f74962a357b2 = $(`<div id="html_d38c68a15ebbc038e775f74962a357b2" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PLACE BARROIS</th></tr>             <tr><td>Vélos disponibles :</td><td>10</td></tr>             <tr><td>Bornes libres :</td><td>7</td></tr>             <tr><td>Remplissage :</td><td>58%</td></tr>         </table>         </div>`)[0];
-                popup_fe9209249db39d178f8b03c1753dc5c8.setContent(html_d38c68a15ebbc038e775f74962a357b2);
+                var html_6c2c15523888af7d3dc16084eff80720 = $(`<div id="html_6c2c15523888af7d3dc16084eff80720" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PLACE BARROIS</th></tr>             <tr><td>Vélos disponibles :</td><td>9</td></tr>             <tr><td>Bornes libres :</td><td>8</td></tr>             <tr><td>Remplissage :</td><td>52%</td></tr>         </table>         </div>`)[0];
+                popup_cb19e288ca3dec8b527b7638435dd95d.setContent(html_6c2c15523888af7d3dc16084eff80720);
             
         
 
-        marker_d1a6ec4c9faccfa27c33cfd445429180.bindPopup(popup_fe9209249db39d178f8b03c1753dc5c8)
+        marker_dfc95513043ee6430e1fa50d7ac8a0d9.bindPopup(popup_cb19e288ca3dec8b527b7638435dd95d)
         ;
 
         
     
     
-            var marker_46bc8d8bb577357145772d2f1f8bd639 = L.marker(
+            var marker_ac11e5a7123ffea01923ef09f7cff449 = L.marker(
                 [48.680516, 6.181811],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_041ca1f7c711abbd2b048cc223d642bc = L.AwesomeMarkers.icon(
+            var icon_b8041f96eb5abeef85b31779f64f7393 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_46bc8d8bb577357145772d2f1f8bd639.setIcon(icon_041ca1f7c711abbd2b048cc223d642bc);
+            marker_ac11e5a7123ffea01923ef09f7cff449.setIcon(icon_b8041f96eb5abeef85b31779f64f7393);
         
     
-        var popup_287b3c42338101811fdb9d1f5e34a055 = L.popup({"maxWidth": 300});
+        var popup_cbe59554a6818d28f1acd94c02ef8d16 = L.popup({"maxWidth": 300});
 
         
             
-                var html_51577722c8d0eef66cb82c1b775d4488 = $(`<div id="html_51577722c8d0eef66cb82c1b775d4488" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">SAURUPT</th></tr>             <tr><td>Vélos disponibles :</td><td>1</td></tr>             <tr><td>Bornes libres :</td><td>14</td></tr>             <tr><td>Remplissage :</td><td>6%</td></tr>         </table>         </div>`)[0];
-                popup_287b3c42338101811fdb9d1f5e34a055.setContent(html_51577722c8d0eef66cb82c1b775d4488);
+                var html_d5d98f042bf85d6d605df1df927a2a35 = $(`<div id="html_d5d98f042bf85d6d605df1df927a2a35" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">SAURUPT</th></tr>             <tr><td>Vélos disponibles :</td><td>1</td></tr>             <tr><td>Bornes libres :</td><td>14</td></tr>             <tr><td>Remplissage :</td><td>6%</td></tr>         </table>         </div>`)[0];
+                popup_cbe59554a6818d28f1acd94c02ef8d16.setContent(html_d5d98f042bf85d6d605df1df927a2a35);
             
         
 
-        marker_46bc8d8bb577357145772d2f1f8bd639.bindPopup(popup_287b3c42338101811fdb9d1f5e34a055)
+        marker_ac11e5a7123ffea01923ef09f7cff449.bindPopup(popup_cbe59554a6818d28f1acd94c02ef8d16)
         ;
 
         
     
     
-            var marker_c6fbd8707772ceb79666df02b8d58108 = L.marker(
+            var marker_76b3a9cc8bd23a9a67dc692ca25021cd = L.marker(
                 [48.707187, 6.185524],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_96155692676a78e80b39f616c3d9f4c2 = L.AwesomeMarkers.icon(
+            var icon_76b59412e957bcd9a154c27e88bdff71 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_c6fbd8707772ceb79666df02b8d58108.setIcon(icon_96155692676a78e80b39f616c3d9f4c2);
+            marker_76b3a9cc8bd23a9a67dc692ca25021cd.setIcon(icon_76b59412e957bcd9a154c27e88bdff71);
         
     
-        var popup_f74a720e76754b9c499074f4756ad584 = L.popup({"maxWidth": 300});
+        var popup_cabe47f94f370c346d738b9b963e0ece = L.popup({"maxWidth": 300});
 
         
             
-                var html_bc80c12637b56876888425730904f47f = $(`<div id="html_bc80c12637b56876888425730904f47f" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">MALZEVILLE</th></tr>             <tr><td>Vélos disponibles :</td><td>6</td></tr>             <tr><td>Bornes libres :</td><td>9</td></tr>             <tr><td>Remplissage :</td><td>40%</td></tr>         </table>         </div>`)[0];
-                popup_f74a720e76754b9c499074f4756ad584.setContent(html_bc80c12637b56876888425730904f47f);
+                var html_da942245226dda664498370762f5a2c1 = $(`<div id="html_da942245226dda664498370762f5a2c1" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">MALZEVILLE</th></tr>             <tr><td>Vélos disponibles :</td><td>7</td></tr>             <tr><td>Bornes libres :</td><td>8</td></tr>             <tr><td>Remplissage :</td><td>46%</td></tr>         </table>         </div>`)[0];
+                popup_cabe47f94f370c346d738b9b963e0ece.setContent(html_da942245226dda664498370762f5a2c1);
             
         
 
-        marker_c6fbd8707772ceb79666df02b8d58108.bindPopup(popup_f74a720e76754b9c499074f4756ad584)
+        marker_76b3a9cc8bd23a9a67dc692ca25021cd.bindPopup(popup_cabe47f94f370c346d738b9b963e0ece)
         ;
 
         
     
     
-            var marker_8020be20f60ff756133480f3f97b3540 = L.marker(
+            var marker_403241d449566a52c62016b19db10e3e = L.marker(
                 [48.6919579483934, 6.17851021950761],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_bbd87ad18279591ba0a66cb40d36cd2d = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            var icon_f580f644b034cf758c0398753a20c8c6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_8020be20f60ff756133480f3f97b3540.setIcon(icon_bbd87ad18279591ba0a66cb40d36cd2d);
+            marker_403241d449566a52c62016b19db10e3e.setIcon(icon_f580f644b034cf758c0398753a20c8c6);
         
     
-        var popup_5d952c5133ab6ffffa8efac36cd7233b = L.popup({"maxWidth": 300});
+        var popup_b548d34416f9e19ae68aee751dbf5278 = L.popup({"maxWidth": 300});
 
         
             
-                var html_e65c707f475085d8a0fdf5e11691bc64 = $(`<div id="html_e65c707f475085d8a0fdf5e11691bc64" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PLACE DE DOMBASLE</th></tr>             <tr><td>Vélos disponibles :</td><td>9</td></tr>             <tr><td>Bornes libres :</td><td>19</td></tr>             <tr><td>Remplissage :</td><td>32%</td></tr>         </table>         </div>`)[0];
-                popup_5d952c5133ab6ffffa8efac36cd7233b.setContent(html_e65c707f475085d8a0fdf5e11691bc64);
+                var html_2814bff3f1e58bf4ebe66491c222287c = $(`<div id="html_2814bff3f1e58bf4ebe66491c222287c" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PLACE DE DOMBASLE</th></tr>             <tr><td>Vélos disponibles :</td><td>5</td></tr>             <tr><td>Bornes libres :</td><td>23</td></tr>             <tr><td>Remplissage :</td><td>17%</td></tr>         </table>         </div>`)[0];
+                popup_b548d34416f9e19ae68aee751dbf5278.setContent(html_2814bff3f1e58bf4ebe66491c222287c);
             
         
 
-        marker_8020be20f60ff756133480f3f97b3540.bindPopup(popup_5d952c5133ab6ffffa8efac36cd7233b)
+        marker_403241d449566a52c62016b19db10e3e.bindPopup(popup_b548d34416f9e19ae68aee751dbf5278)
         ;
 
         
     
     
-            var marker_416e5ec9c92333195efc40a0b6fc5127 = L.marker(
+            var marker_ba0aeed4b2c43738fd23b232426b4b61 = L.marker(
                 [48.675248491826174, 6.162844844269929],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_75011d8f24f989626440b83b055d99a5 = L.AwesomeMarkers.icon(
+            var icon_8d3619a31b54c316ccc5d60881805470 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_416e5ec9c92333195efc40a0b6fc5127.setIcon(icon_75011d8f24f989626440b83b055d99a5);
+            marker_ba0aeed4b2c43738fd23b232426b4b61.setIcon(icon_8d3619a31b54c316ccc5d60881805470);
         
     
-        var popup_c1030fbedff5edadd2aaa98c156dcc0e = L.popup({"maxWidth": 300});
+        var popup_fd056adcfac68b8e637455d266b2663d = L.popup({"maxWidth": 300});
 
         
             
-                var html_25dca1f9a2d1522e4699ba637ab7d1d4 = $(`<div id="html_25dca1f9a2d1522e4699ba637ab7d1d4" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">BAUDRICOURT HAUSSONVILLE</th></tr>             <tr><td>Vélos disponibles :</td><td>8</td></tr>             <tr><td>Bornes libres :</td><td>7</td></tr>             <tr><td>Remplissage :</td><td>53%</td></tr>         </table>         </div>`)[0];
-                popup_c1030fbedff5edadd2aaa98c156dcc0e.setContent(html_25dca1f9a2d1522e4699ba637ab7d1d4);
+                var html_410b7f694f0a0a60633781bd698460d0 = $(`<div id="html_410b7f694f0a0a60633781bd698460d0" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">BAUDRICOURT HAUSSONVILLE</th></tr>             <tr><td>Vélos disponibles :</td><td>7</td></tr>             <tr><td>Bornes libres :</td><td>8</td></tr>             <tr><td>Remplissage :</td><td>46%</td></tr>         </table>         </div>`)[0];
+                popup_fd056adcfac68b8e637455d266b2663d.setContent(html_410b7f694f0a0a60633781bd698460d0);
             
         
 
-        marker_416e5ec9c92333195efc40a0b6fc5127.bindPopup(popup_c1030fbedff5edadd2aaa98c156dcc0e)
+        marker_ba0aeed4b2c43738fd23b232426b4b61.bindPopup(popup_fd056adcfac68b8e637455d266b2663d)
         ;
 
         
     
     
-            var marker_01b2782a4597b97f61b868b60aec7bce = L.marker(
+            var marker_233e86fafe268e68201657678e69953b = L.marker(
                 [48.701365, 6.176824],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_5ecbc1f3a61d4479236e3ba1ad875613 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            var icon_6f43e6a6a748d03e72fe74d662a0365d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_01b2782a4597b97f61b868b60aec7bce.setIcon(icon_5ecbc1f3a61d4479236e3ba1ad875613);
+            marker_233e86fafe268e68201657678e69953b.setIcon(icon_6f43e6a6a748d03e72fe74d662a0365d);
         
     
-        var popup_a168c2734703b3e2cfa8149e9b95e293 = L.popup({"maxWidth": 300});
+        var popup_8118f2d88574a5b4af443710ef5dcd84 = L.popup({"maxWidth": 300});
 
         
             
-                var html_ef0767a4f5adf3fd83a5331f541264b3 = $(`<div id="html_ef0767a4f5adf3fd83a5331f541264b3" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">3 MAISONS - CHARLES V (CB)</th></tr>             <tr><td>Vélos disponibles :</td><td>0</td></tr>             <tr><td>Bornes libres :</td><td>23</td></tr>             <tr><td>Remplissage :</td><td>0%</td></tr>         </table>         </div>`)[0];
-                popup_a168c2734703b3e2cfa8149e9b95e293.setContent(html_ef0767a4f5adf3fd83a5331f541264b3);
+                var html_a391acf8875b5be6b6530e8488c6a77e = $(`<div id="html_a391acf8875b5be6b6530e8488c6a77e" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">3 MAISONS - CHARLES V (CB)</th></tr>             <tr><td>Vélos disponibles :</td><td>1</td></tr>             <tr><td>Bornes libres :</td><td>22</td></tr>             <tr><td>Remplissage :</td><td>4%</td></tr>         </table>         </div>`)[0];
+                popup_8118f2d88574a5b4af443710ef5dcd84.setContent(html_a391acf8875b5be6b6530e8488c6a77e);
             
         
 
-        marker_01b2782a4597b97f61b868b60aec7bce.bindPopup(popup_a168c2734703b3e2cfa8149e9b95e293)
+        marker_233e86fafe268e68201657678e69953b.bindPopup(popup_8118f2d88574a5b4af443710ef5dcd84)
         ;
 
         
     
     
-            var marker_c6cd86e8a8c5105d9aeb957615f8e5e8 = L.marker(
+            var marker_4f1ab8df9ba0d022fa1b33422ffea0f0 = L.marker(
                 [48.6927939742599, 6.19628435757015],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_69783f7f955475660ac567c8d089807e = L.AwesomeMarkers.icon(
+            var icon_fa46199eaae7bae5246db48c82c5fd0d = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_c6cd86e8a8c5105d9aeb957615f8e5e8.setIcon(icon_69783f7f955475660ac567c8d089807e);
+            marker_4f1ab8df9ba0d022fa1b33422ffea0f0.setIcon(icon_fa46199eaae7bae5246db48c82c5fd0d);
         
     
-        var popup_2480326f9bbc160666685fa2a62cc09e = L.popup({"maxWidth": 300});
+        var popup_d379b5112de16903072f64f51d83e168 = L.popup({"maxWidth": 300});
 
         
             
-                var html_7831edde5336682eb843c54271174898 = $(`<div id="html_7831edde5336682eb843c54271174898" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PROMENADE DES CANAUX</th></tr>             <tr><td>Vélos disponibles :</td><td>4</td></tr>             <tr><td>Bornes libres :</td><td>12</td></tr>             <tr><td>Remplissage :</td><td>25%</td></tr>         </table>         </div>`)[0];
-                popup_2480326f9bbc160666685fa2a62cc09e.setContent(html_7831edde5336682eb843c54271174898);
+                var html_c858583222609c08ca508edd0a3cf4f8 = $(`<div id="html_c858583222609c08ca508edd0a3cf4f8" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PROMENADE DES CANAUX</th></tr>             <tr><td>Vélos disponibles :</td><td>7</td></tr>             <tr><td>Bornes libres :</td><td>9</td></tr>             <tr><td>Remplissage :</td><td>43%</td></tr>         </table>         </div>`)[0];
+                popup_d379b5112de16903072f64f51d83e168.setContent(html_c858583222609c08ca508edd0a3cf4f8);
             
         
 
-        marker_c6cd86e8a8c5105d9aeb957615f8e5e8.bindPopup(popup_2480326f9bbc160666685fa2a62cc09e)
+        marker_4f1ab8df9ba0d022fa1b33422ffea0f0.bindPopup(popup_d379b5112de16903072f64f51d83e168)
         ;
 
         
     
     
-            var marker_f91253ad89048cc3757d769979f9bd92 = L.marker(
+            var marker_2b4acf9bce05cf9d553d78019e1a10f6 = L.marker(
                 [48.6952351, 6.1798109],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_42142b664c1416fde2a86ea4ffb5d66b = L.AwesomeMarkers.icon(
+            var icon_65a42752a1d07632eb7ce3d2d5aba67a = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_f91253ad89048cc3757d769979f9bd92.setIcon(icon_42142b664c1416fde2a86ea4ffb5d66b);
+            marker_2b4acf9bce05cf9d553d78019e1a10f6.setIcon(icon_65a42752a1d07632eb7ce3d2d5aba67a);
         
     
-        var popup_b531eff61663e3b6471707440ba2d536 = L.popup({"maxWidth": 300});
+        var popup_838061da449419887c3876dd4b3cdbd6 = L.popup({"maxWidth": 300});
 
         
             
-                var html_6425946171e1f970bad31782ece26eb6 = $(`<div id="html_6425946171e1f970bad31782ece26eb6" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PLACE ST EPVRE</th></tr>             <tr><td>Vélos disponibles :</td><td>4</td></tr>             <tr><td>Bornes libres :</td><td>16</td></tr>             <tr><td>Remplissage :</td><td>20%</td></tr>         </table>         </div>`)[0];
-                popup_b531eff61663e3b6471707440ba2d536.setContent(html_6425946171e1f970bad31782ece26eb6);
+                var html_853c136fa4a367fd6cb9e4e5e8c41b0e = $(`<div id="html_853c136fa4a367fd6cb9e4e5e8c41b0e" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PLACE ST EPVRE</th></tr>             <tr><td>Vélos disponibles :</td><td>3</td></tr>             <tr><td>Bornes libres :</td><td>17</td></tr>             <tr><td>Remplissage :</td><td>15%</td></tr>         </table>         </div>`)[0];
+                popup_838061da449419887c3876dd4b3cdbd6.setContent(html_853c136fa4a367fd6cb9e4e5e8c41b0e);
             
         
 
-        marker_f91253ad89048cc3757d769979f9bd92.bindPopup(popup_b531eff61663e3b6471707440ba2d536)
+        marker_2b4acf9bce05cf9d553d78019e1a10f6.bindPopup(popup_838061da449419887c3876dd4b3cdbd6)
         ;
 
         
     
     
-            var marker_9cc0e0f2f9f79b746ec3dbc9a19e7f60 = L.marker(
+            var marker_6ac72ad5535bc963a0b9c33d5d520883 = L.marker(
                 [48.685497, 6.161015],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_a1ed9fb63d36f39e845f523dc9801cc6 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            var icon_752c7b1cf636e0434324d9dc8403c0c6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_9cc0e0f2f9f79b746ec3dbc9a19e7f60.setIcon(icon_a1ed9fb63d36f39e845f523dc9801cc6);
+            marker_6ac72ad5535bc963a0b9c33d5d520883.setIcon(icon_752c7b1cf636e0434324d9dc8403c0c6);
         
     
-        var popup_e819bfe75630c5ce4a15e71f31170060 = L.popup({"maxWidth": 300});
+        var popup_5bccb8d54753be89589938dfbc2be6de = L.popup({"maxWidth": 300});
 
         
             
-                var html_131dbfd0cc42d649032b0e93e16e10e1 = $(`<div id="html_131dbfd0cc42d649032b0e93e16e10e1" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">MEDREVILLE</th></tr>             <tr><td>Vélos disponibles :</td><td>0</td></tr>             <tr><td>Bornes libres :</td><td>15</td></tr>             <tr><td>Remplissage :</td><td>0%</td></tr>         </table>         </div>`)[0];
-                popup_e819bfe75630c5ce4a15e71f31170060.setContent(html_131dbfd0cc42d649032b0e93e16e10e1);
+                var html_dc054159a9f287ce4e2fed4e9bd25bf6 = $(`<div id="html_dc054159a9f287ce4e2fed4e9bd25bf6" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">MEDREVILLE</th></tr>             <tr><td>Vélos disponibles :</td><td>1</td></tr>             <tr><td>Bornes libres :</td><td>14</td></tr>             <tr><td>Remplissage :</td><td>6%</td></tr>         </table>         </div>`)[0];
+                popup_5bccb8d54753be89589938dfbc2be6de.setContent(html_dc054159a9f287ce4e2fed4e9bd25bf6);
             
         
 
-        marker_9cc0e0f2f9f79b746ec3dbc9a19e7f60.bindPopup(popup_e819bfe75630c5ce4a15e71f31170060)
+        marker_6ac72ad5535bc963a0b9c33d5d520883.bindPopup(popup_5bccb8d54753be89589938dfbc2be6de)
         ;
 
         
     
     
-            var marker_f8e5b90e86ca16b8196e65dbb63898a7 = L.marker(
+            var marker_24c66f9dafeddf9dccb05055f7a5d37b = L.marker(
                 [48.684781, 6.187631],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_bd6800437f557ad9ac354ec0bc93bb82 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            var icon_ead49b297dc3100f8ac69d8a7373a2c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
             );
-            marker_f8e5b90e86ca16b8196e65dbb63898a7.setIcon(icon_bd6800437f557ad9ac354ec0bc93bb82);
+            marker_24c66f9dafeddf9dccb05055f7a5d37b.setIcon(icon_ead49b297dc3100f8ac69d8a7373a2c3);
         
     
-        var popup_d5e7756252e17a1e11736e16d6981ad6 = L.popup({"maxWidth": 300});
+        var popup_faf5bb8eed8086ba7ef2d2c5068c3684 = L.popup({"maxWidth": 300});
 
         
             
-                var html_195669a8cf13ba37819b3a56cf175348 = $(`<div id="html_195669a8cf13ba37819b3a56cf175348" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PLACE DES VOSGES</th></tr>             <tr><td>Vélos disponibles :</td><td>11</td></tr>             <tr><td>Bornes libres :</td><td>4</td></tr>             <tr><td>Remplissage :</td><td>73%</td></tr>         </table>         </div>`)[0];
-                popup_d5e7756252e17a1e11736e16d6981ad6.setContent(html_195669a8cf13ba37819b3a56cf175348);
+                var html_16dac8607968200d48ff6383c2c6cf0e = $(`<div id="html_16dac8607968200d48ff6383c2c6cf0e" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PLACE DES VOSGES</th></tr>             <tr><td>Vélos disponibles :</td><td>12</td></tr>             <tr><td>Bornes libres :</td><td>3</td></tr>             <tr><td>Remplissage :</td><td>80%</td></tr>         </table>         </div>`)[0];
+                popup_faf5bb8eed8086ba7ef2d2c5068c3684.setContent(html_16dac8607968200d48ff6383c2c6cf0e);
             
         
 
-        marker_f8e5b90e86ca16b8196e65dbb63898a7.bindPopup(popup_d5e7756252e17a1e11736e16d6981ad6)
+        marker_24c66f9dafeddf9dccb05055f7a5d37b.bindPopup(popup_faf5bb8eed8086ba7ef2d2c5068c3684)
         ;
 
         
     
     
-            var marker_694545ee069a2bfa94ad5549e86515c1 = L.marker(
+            var marker_be05f75e66bd125cb3661424ca79575b = L.marker(
                 [48.691291, 6.190844],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_b30b165f9525f3623054cd90d8f742c3 = L.AwesomeMarkers.icon(
+            var icon_08d95d3a941ca3bf80569d36147bdae4 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
             );
-            marker_694545ee069a2bfa94ad5549e86515c1.setIcon(icon_b30b165f9525f3623054cd90d8f742c3);
+            marker_be05f75e66bd125cb3661424ca79575b.setIcon(icon_08d95d3a941ca3bf80569d36147bdae4);
         
     
-        var popup_2c853534624450d0d3f3d7cc4e7a3ade = L.popup({"maxWidth": 300});
+        var popup_5bfb642acf91be3e3e89a9635aecd08b = L.popup({"maxWidth": 300});
 
         
             
-                var html_111e8a972946118b6921dc7cad7934f7 = $(`<div id="html_111e8a972946118b6921dc7cad7934f7" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">JARDINIERS - TIERCELINS</th></tr>             <tr><td>Vélos disponibles :</td><td>11</td></tr>             <tr><td>Bornes libres :</td><td>1</td></tr>             <tr><td>Remplissage :</td><td>91%</td></tr>         </table>         </div>`)[0];
-                popup_2c853534624450d0d3f3d7cc4e7a3ade.setContent(html_111e8a972946118b6921dc7cad7934f7);
+                var html_427ab458c488595964dec4c8abac5797 = $(`<div id="html_427ab458c488595964dec4c8abac5797" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">JARDINIERS - TIERCELINS</th></tr>             <tr><td>Vélos disponibles :</td><td>11</td></tr>             <tr><td>Bornes libres :</td><td>1</td></tr>             <tr><td>Remplissage :</td><td>91%</td></tr>         </table>         </div>`)[0];
+                popup_5bfb642acf91be3e3e89a9635aecd08b.setContent(html_427ab458c488595964dec4c8abac5797);
             
         
 
-        marker_694545ee069a2bfa94ad5549e86515c1.bindPopup(popup_2c853534624450d0d3f3d7cc4e7a3ade)
+        marker_be05f75e66bd125cb3661424ca79575b.bindPopup(popup_5bfb642acf91be3e3e89a9635aecd08b)
         ;
 
         
     
     
-            var marker_64fc9694df2773cd2db1aaaa351bbccf = L.marker(
+            var marker_9d77d51c0cfd3489322976f0bd6839d1 = L.marker(
                 [48.674665, 6.170655],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_5e18a37916e9bae3551b979fe2cd9560 = L.AwesomeMarkers.icon(
+            var icon_679bd4cea1b731a6826718f8c41b373b = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
             );
-            marker_64fc9694df2773cd2db1aaaa351bbccf.setIcon(icon_5e18a37916e9bae3551b979fe2cd9560);
+            marker_9d77d51c0cfd3489322976f0bd6839d1.setIcon(icon_679bd4cea1b731a6826718f8c41b373b);
         
     
-        var popup_dab2a395a79de6074e009af99a1beee8 = L.popup({"maxWidth": 300});
+        var popup_ad5024515ae9d47cda68b734b19f2897 = L.popup({"maxWidth": 300});
 
         
             
-                var html_0a4d7e58db0f59b379ef201932af5979 = $(`<div id="html_0a4d7e58db0f59b379ef201932af5979" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">ARTEM</th></tr>             <tr><td>Vélos disponibles :</td><td>19</td></tr>             <tr><td>Bornes libres :</td><td>1</td></tr>             <tr><td>Remplissage :</td><td>95%</td></tr>         </table>         </div>`)[0];
-                popup_dab2a395a79de6074e009af99a1beee8.setContent(html_0a4d7e58db0f59b379ef201932af5979);
+                var html_b7294b2655fcf3cc4d342fdd5862d53b = $(`<div id="html_b7294b2655fcf3cc4d342fdd5862d53b" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">ARTEM</th></tr>             <tr><td>Vélos disponibles :</td><td>18</td></tr>             <tr><td>Bornes libres :</td><td>2</td></tr>             <tr><td>Remplissage :</td><td>90%</td></tr>         </table>         </div>`)[0];
+                popup_ad5024515ae9d47cda68b734b19f2897.setContent(html_b7294b2655fcf3cc4d342fdd5862d53b);
             
         
 
-        marker_64fc9694df2773cd2db1aaaa351bbccf.bindPopup(popup_dab2a395a79de6074e009af99a1beee8)
+        marker_9d77d51c0cfd3489322976f0bd6839d1.bindPopup(popup_ad5024515ae9d47cda68b734b19f2897)
         ;
 
         
     
     
-            var marker_47c3ad302850517e46c5a612afe21165 = L.marker(
+            var marker_19b8f6ff40c0b9334faaaabfcd490e7e = L.marker(
                 [48.6956140662607, 6.17676840786255],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_974fcd8e17fe82c76bb037f22d5335ce = L.AwesomeMarkers.icon(
+            var icon_394a1c14008c4f79da56e486a2f4f764 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_47c3ad302850517e46c5a612afe21165.setIcon(icon_974fcd8e17fe82c76bb037f22d5335ce);
+            marker_19b8f6ff40c0b9334faaaabfcd490e7e.setIcon(icon_394a1c14008c4f79da56e486a2f4f764);
         
     
-        var popup_fbbecff17f2ea783c9521de9a2f13362 = L.popup({"maxWidth": 300});
+        var popup_a09136176cb476d587b797d4547eb083 = L.popup({"maxWidth": 300});
 
         
             
-                var html_9fbd73aa15cd6b8827f4d3be2182aaf0 = $(`<div id="html_9fbd73aa15cd6b8827f4d3be2182aaf0" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">COURS LEOPOLD - SAINT MICHEL</th></tr>             <tr><td>Vélos disponibles :</td><td>13</td></tr>             <tr><td>Bornes libres :</td><td>5</td></tr>             <tr><td>Remplissage :</td><td>72%</td></tr>         </table>         </div>`)[0];
-                popup_fbbecff17f2ea783c9521de9a2f13362.setContent(html_9fbd73aa15cd6b8827f4d3be2182aaf0);
+                var html_903dcb45d3399b8bf344ebdf7256c5a9 = $(`<div id="html_903dcb45d3399b8bf344ebdf7256c5a9" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">COURS LEOPOLD - SAINT MICHEL</th></tr>             <tr><td>Vélos disponibles :</td><td>11</td></tr>             <tr><td>Bornes libres :</td><td>7</td></tr>             <tr><td>Remplissage :</td><td>61%</td></tr>         </table>         </div>`)[0];
+                popup_a09136176cb476d587b797d4547eb083.setContent(html_903dcb45d3399b8bf344ebdf7256c5a9);
             
         
 
-        marker_47c3ad302850517e46c5a612afe21165.bindPopup(popup_fbbecff17f2ea783c9521de9a2f13362)
+        marker_19b8f6ff40c0b9334faaaabfcd490e7e.bindPopup(popup_a09136176cb476d587b797d4547eb083)
         ;
 
         
     
     
-            var marker_53054989150cd3962f777661e80c6c4a = L.marker(
+            var marker_78e37380cf05e44dae6dec97405b2a3f = L.marker(
                 [48.69037, 6.175677],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_bb6f815c93d419defcaee9e2fd8db1ad = L.AwesomeMarkers.icon(
+            var icon_c0a24a33d5ae3af812587985bcee5c2f = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_53054989150cd3962f777661e80c6c4a.setIcon(icon_bb6f815c93d419defcaee9e2fd8db1ad);
+            marker_78e37380cf05e44dae6dec97405b2a3f.setIcon(icon_c0a24a33d5ae3af812587985bcee5c2f);
         
     
-        var popup_a0b6ec037d0fc4dd17c36335466adc2b = L.popup({"maxWidth": 300});
+        var popup_5ad220957ae99a5cc8010189a0a21faf = L.popup({"maxWidth": 300});
 
         
             
-                var html_58a8ce5b620f611a4349ef38446a9e0e = $(`<div id="html_58a8ce5b620f611a4349ef38446a9e0e" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">GARE THIERS (CB)</th></tr>             <tr><td>Vélos disponibles :</td><td>7</td></tr>             <tr><td>Bornes libres :</td><td>32</td></tr>             <tr><td>Remplissage :</td><td>17%</td></tr>         </table>         </div>`)[0];
-                popup_a0b6ec037d0fc4dd17c36335466adc2b.setContent(html_58a8ce5b620f611a4349ef38446a9e0e);
+                var html_901ca9381921b3b11d7224c6f5ce5f25 = $(`<div id="html_901ca9381921b3b11d7224c6f5ce5f25" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">GARE THIERS (CB)</th></tr>             <tr><td>Vélos disponibles :</td><td>7</td></tr>             <tr><td>Bornes libres :</td><td>32</td></tr>             <tr><td>Remplissage :</td><td>17%</td></tr>         </table>         </div>`)[0];
+                popup_5ad220957ae99a5cc8010189a0a21faf.setContent(html_901ca9381921b3b11d7224c6f5ce5f25);
             
         
 
-        marker_53054989150cd3962f777661e80c6c4a.bindPopup(popup_a0b6ec037d0fc4dd17c36335466adc2b)
+        marker_78e37380cf05e44dae6dec97405b2a3f.bindPopup(popup_5ad220957ae99a5cc8010189a0a21faf)
         ;
 
         
     
     
-            var marker_4538370501b863fe6a169b68ba5f6fe3 = L.marker(
+            var marker_c1596594a9978af164bdc7bf0c8476dc = L.marker(
                 [48.6945981637388, 6.18229408637817],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_274a684d0a758845b251237bc4608329 = L.AwesomeMarkers.icon(
+            var icon_63a2e9cd1db996e31447274567104cd1 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_4538370501b863fe6a169b68ba5f6fe3.setIcon(icon_274a684d0a758845b251237bc4608329);
+            marker_c1596594a9978af164bdc7bf0c8476dc.setIcon(icon_63a2e9cd1db996e31447274567104cd1);
         
     
-        var popup_6ee4556198510ed4440aed25758f4efe = L.popup({"maxWidth": 300});
+        var popup_32b970f0289f4d7d36172c68b134b5b9 = L.popup({"maxWidth": 300});
 
         
             
-                var html_274c179d6a8463e4a2d46a8696484389 = $(`<div id="html_274c179d6a8463e4a2d46a8696484389" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PLACE DE LA CARRIERE</th></tr>             <tr><td>Vélos disponibles :</td><td>4</td></tr>             <tr><td>Bornes libres :</td><td>12</td></tr>             <tr><td>Remplissage :</td><td>25%</td></tr>         </table>         </div>`)[0];
-                popup_6ee4556198510ed4440aed25758f4efe.setContent(html_274c179d6a8463e4a2d46a8696484389);
+                var html_6517dbfd9b1f0f1e91be82717d6d1d73 = $(`<div id="html_6517dbfd9b1f0f1e91be82717d6d1d73" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PLACE DE LA CARRIERE</th></tr>             <tr><td>Vélos disponibles :</td><td>4</td></tr>             <tr><td>Bornes libres :</td><td>12</td></tr>             <tr><td>Remplissage :</td><td>25%</td></tr>         </table>         </div>`)[0];
+                popup_32b970f0289f4d7d36172c68b134b5b9.setContent(html_6517dbfd9b1f0f1e91be82717d6d1d73);
             
         
 
-        marker_4538370501b863fe6a169b68ba5f6fe3.bindPopup(popup_6ee4556198510ed4440aed25758f4efe)
+        marker_c1596594a9978af164bdc7bf0c8476dc.bindPopup(popup_32b970f0289f4d7d36172c68b134b5b9)
         ;
 
         
     
     
-            var marker_afb449c022ce2da78964f15cdf4e830d = L.marker(
+            var marker_6613def7d5afd9ed04f00b380eb1b0e3 = L.marker(
                 [48.6859179816784, 6.1674218161464],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_8d1481147f41fdeec49fdfda909bdbcf = L.AwesomeMarkers.icon(
+            var icon_c5492653297238a627f6763aff805c23 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
             );
-            marker_afb449c022ce2da78964f15cdf4e830d.setIcon(icon_8d1481147f41fdeec49fdfda909bdbcf);
+            marker_6613def7d5afd9ed04f00b380eb1b0e3.setIcon(icon_c5492653297238a627f6763aff805c23);
         
     
-        var popup_6d93f4c5422c598e67911677759c8eb3 = L.popup({"maxWidth": 300});
+        var popup_4dfbed049ccaa51d19e19f73e24e46e2 = L.popup({"maxWidth": 300});
 
         
             
-                var html_804827f4a7143f405b41a1aa27b4ae2c = $(`<div id="html_804827f4a7143f405b41a1aa27b4ae2c" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PLACE COMMANDERIE</th></tr>             <tr><td>Vélos disponibles :</td><td>1</td></tr>             <tr><td>Bornes libres :</td><td>17</td></tr>             <tr><td>Remplissage :</td><td>5%</td></tr>         </table>         </div>`)[0];
-                popup_6d93f4c5422c598e67911677759c8eb3.setContent(html_804827f4a7143f405b41a1aa27b4ae2c);
+                var html_a986e2434848213d52877fd97c92ab99 = $(`<div id="html_a986e2434848213d52877fd97c92ab99" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">PLACE COMMANDERIE</th></tr>             <tr><td>Vélos disponibles :</td><td>1</td></tr>             <tr><td>Bornes libres :</td><td>17</td></tr>             <tr><td>Remplissage :</td><td>5%</td></tr>         </table>         </div>`)[0];
+                popup_4dfbed049ccaa51d19e19f73e24e46e2.setContent(html_a986e2434848213d52877fd97c92ab99);
             
         
 
-        marker_afb449c022ce2da78964f15cdf4e830d.bindPopup(popup_6d93f4c5422c598e67911677759c8eb3)
+        marker_6613def7d5afd9ed04f00b380eb1b0e3.bindPopup(popup_4dfbed049ccaa51d19e19f73e24e46e2)
         ;
 
         
     
     
-            var marker_a575354f280bc94edb59004e4bf90511 = L.marker(
+            var marker_8fe8fc96c3c8f3eacb3e75bf4e791a30 = L.marker(
                 [48.6957176856775, 6.17133838702303],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_b092891ced7acff8cc276a71267d2919 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            var icon_367c10bc56998653317d9d14ea57594c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
             );
-            marker_a575354f280bc94edb59004e4bf90511.setIcon(icon_b092891ced7acff8cc276a71267d2919);
+            marker_8fe8fc96c3c8f3eacb3e75bf4e791a30.setIcon(icon_367c10bc56998653317d9d14ea57594c);
         
     
-        var popup_b997e9a200bf7f5170b4587f74d1094b = L.popup({"maxWidth": 300});
+        var popup_65646ee2c69835d901607cc03d9de2b7 = L.popup({"maxWidth": 300});
 
         
             
-                var html_5ad911102416f472b87378396df34a84 = $(`<div id="html_5ad911102416f472b87378396df34a84" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">CONSERVATOIRE - MANUFACTURE</th></tr>             <tr><td>Vélos disponibles :</td><td>12</td></tr>             <tr><td>Bornes libres :</td><td>3</td></tr>             <tr><td>Remplissage :</td><td>80%</td></tr>         </table>         </div>`)[0];
-                popup_b997e9a200bf7f5170b4587f74d1094b.setContent(html_5ad911102416f472b87378396df34a84);
+                var html_9656b956e0a259d81e8f31e6907e5c6c = $(`<div id="html_9656b956e0a259d81e8f31e6907e5c6c" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">CONSERVATOIRE - MANUFACTURE</th></tr>             <tr><td>Vélos disponibles :</td><td>15</td></tr>             <tr><td>Bornes libres :</td><td>0</td></tr>             <tr><td>Remplissage :</td><td>100%</td></tr>         </table>         </div>`)[0];
+                popup_65646ee2c69835d901607cc03d9de2b7.setContent(html_9656b956e0a259d81e8f31e6907e5c6c);
             
         
 
-        marker_a575354f280bc94edb59004e4bf90511.bindPopup(popup_b997e9a200bf7f5170b4587f74d1094b)
+        marker_8fe8fc96c3c8f3eacb3e75bf4e791a30.bindPopup(popup_65646ee2c69835d901607cc03d9de2b7)
         ;
 
         
     
     
-            var marker_2616b3a908c1ec5173f8557035b2ea16 = L.marker(
+            var marker_d76b57115db0c91916dbd2340346dc93 = L.marker(
                 [48.679501, 6.167344],
                 {}
-            ).addTo(map_46f0a35dadc76bf35e71f625aaee0d25);
+            ).addTo(map_e41636177b01506912eeb81cc16b98dd);
         
     
-            var icon_f00b2cc337a693df253c4d3cd284175d = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            var icon_70c033942212b13318a000978628e8f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
             );
-            marker_2616b3a908c1ec5173f8557035b2ea16.setIcon(icon_f00b2cc337a693df253c4d3cd284175d);
+            marker_d76b57115db0c91916dbd2340346dc93.setIcon(icon_70c033942212b13318a000978628e8f8);
         
     
-        var popup_e476d3fc9b1829f85dacfcdd002bde7c = L.popup({"maxWidth": 300});
+        var popup_d74aab691757997391e6ba7f62bf49f4 = L.popup({"maxWidth": 300});
 
         
             
-                var html_686ee69bfb6f6e9982f8e2d393260d10 = $(`<div id="html_686ee69bfb6f6e9982f8e2d393260d10" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">NANCY THERMAL (CB)</th></tr>             <tr><td>Vélos disponibles :</td><td>1</td></tr>             <tr><td>Bornes libres :</td><td>17</td></tr>             <tr><td>Remplissage :</td><td>5%</td></tr>         </table>         </div>`)[0];
-                popup_e476d3fc9b1829f85dacfcdd002bde7c.setContent(html_686ee69bfb6f6e9982f8e2d393260d10);
+                var html_e696cc5237a1cfc7abf24d93ffb9ce77 = $(`<div id="html_e696cc5237a1cfc7abf24d93ffb9ce77" style="width: 100.0%; height: 100.0%;">         <table style="white-space: nowrap; text-align: left;">             <tr><th colspan="2" style="text-align:center;">NANCY THERMAL (CB)</th></tr>             <tr><td>Vélos disponibles :</td><td>15</td></tr>             <tr><td>Bornes libres :</td><td>3</td></tr>             <tr><td>Remplissage :</td><td>83%</td></tr>         </table>         </div>`)[0];
+                popup_d74aab691757997391e6ba7f62bf49f4.setContent(html_e696cc5237a1cfc7abf24d93ffb9ce77);
             
         
 
-        marker_2616b3a908c1ec5173f8557035b2ea16.bindPopup(popup_e476d3fc9b1829f85dacfcdd002bde7c)
+        marker_d76b57115db0c91916dbd2340346dc93.bindPopup(popup_d74aab691757997391e6ba7f62bf49f4)
         ;
 
         
