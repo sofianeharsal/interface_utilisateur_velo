@@ -6,10 +6,8 @@ Ce projet vise à développer une interface interactive qui intègre les donnée
 
 ## Fonctionnalités
 
-- Affichage des données en temps réel du vélo (vitesse, distance parcourue, état de la batterie, etc.)
-- Contrôle de la luminosité et de la sécurité du vélo
-- Intégration avec des applications de navigation
-- Interface utilisateur réactive et facile à utiliser
+- Affichage des données en temps réel des stations (nombre de vélos, nombre de place libre)
+- Affichage du chemin le plus court entre 2 stations à rééquilibrer en vélo
 
 ## Technologies Utilisées
 
