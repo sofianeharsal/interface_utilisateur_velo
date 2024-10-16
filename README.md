@@ -32,5 +32,6 @@ Pour exécuter ce projet localement, suivez les étapes ci-dessous :
 ## Utilisation
 
 Excécutez le script main.py
-Le programme ouvrira une page HTML contenant la carte de Nancy et les différentes stations de vélo. Le nombre de vélo disponble et le nombre de place de vélo est indiqué pour chaque station. 
+Le programme ouvrira une page HTML contenant la carte de Nancy et les différentes stations de vélo. 
+Le nombre de vélo disponble et le nombre de place de vélo est indiqué pour chaque station. 
 Le programme détectera automatiquement la station de vélo la plus rempli et indiquera le chemin le plus court pour se rendre à la station ayant le plus besoin de vélo afin de rééquilibrer la distribution des vélos dans la ville.
